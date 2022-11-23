@@ -1,0 +1,51 @@
+* {
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+/*HEADER CSS*/
+.header{
+    position: absolute;
+    height: 110px;
+    left: 0px;
+    top: 0px;
+
+}
+.header__navbar{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 47.27%;
+    
+
+}
+.header__navbar-list{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 433px;
+    height: 44px;
+    left: 32px;
+    top: 14px;
+    list-style: none;
+    
+
+}
+.header__navbar-item{
+    align-items: center;
+    padding: 12px 0px;  
+    
+
+
+}
+.header__navbar-item-link{
+    text-decoration: none;
+
+}
