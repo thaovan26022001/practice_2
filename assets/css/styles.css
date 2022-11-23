@@ -1,51 +1,100 @@
-* {
-    box-sizing: inherit;
-}
-html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    box-sizing: border-box;
-}
+
 /*HEADER CSS*/
 .header{
-    position: absolute;
+    overflow: hidden;
     height: 110px;
-    left: 0px;
-    top: 0px;
 
 }
+/*HEADER__NAVBAR*/
 .header__navbar{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 47.27%;
-    
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
 
 }
+.header__icon-list,
+.header__language-list,
 .header__navbar-list{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    position: absolute;
-    width: 433px;
-    height: 44px;
-    left: 32px;
-    top: 14px;
-    list-style: none;
-    
-
-}
-.header__navbar-item{
     align-items: center;
-    padding: 12px 0px;  
+    gap: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    
     
 
-
 }
+.header__language-item,
+.header_icon-item,
+.header__navbar-item{
+    padding: 12px 0;
+    list-style: none;
+}
+.header__language-item-link,
+.header__icon-item-link,
 .header__navbar-item-link{
+    color: var(--text-navbar-color);
     text-decoration: none;
+}
+.active-1{
+    color: var(--text-black-color);
+    border-bottom: 1px solid var(--black-color);
+    padding-bottom: 12px;
+}
+.active-2{
+    color: var(--text-black-color);
+}
+
+.header_navbar-logo{
+    display: flex;
+    align-items: center;
+}
+.header_navbar-logo img{
+    padding-right: 2px;
+    
+}
+.header__language-item{
+    position: relative;
+}
+.separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 12px;
+    border-left: 1px solid var(--separate-color);
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/*HEADER__SUBMENU*/
+.header__submenu{
 
 }
+.header__submenu-list{
+    display: block;
+    line-height: 50px;
+    position: relative;
+    
+}
+.header__submenu-item{
+    display: inline-block;
+    padding-right: 40px;
+    list-style: none;
+}
+.header__submenu-list::before{
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 1px solid var(--separate-color) ;
+    top: calc(100% - 2px);
+    width: 100%;
+}
+.header__submenu-item-link{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-black-color);
+
+}
+
