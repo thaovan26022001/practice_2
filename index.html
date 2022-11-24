@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet/less" type="text/css" href="./styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,105 +18,56 @@
 <body>
    <div class="main">
     <header class="header">
-        <div class="grid ">
-            <div class="header__navbar p-32">
+        <div class="grid wide">
+            <div class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item ">
-                        <a href="" class="header__navbar-item-link active-1 ">Jewelry</a>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link ">
+                            <img src="./assets/img/name.png" alt="My account" class="account">
+                        </a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="" class="header__navbar-item-link">Engagement & Wedding</a>
+                        <a href="" class="header__navbar-item-link active-1">
+                            My account
+                        </a>
+                    </li>
+                </ul>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item separate">
+                        <a href="" class="header__navbar-item-link active-1">De</a>
+                    </li>
+                    <li class="header__navbar-item separate">
+                        <a href="" class="header__navbar-item-link">Fr</a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="" class="header__navbar-item-link">Fashion & more..</a>
+                        <a href="" class="header__navbar-item-link">It</a>
                     </li>
+                  
                 </ul>
-                <div class="header_navbar-logo">
-                    <img src="./assets/img/G.png" alt="G">
-                    <img src="./assets/img/L.png" alt="L">
-                    <img src="./assets/img/A.png" alt="A">
-                    <img src="./assets/img/M.png" alt="M">
-                    <img src="./assets/img/I.png" alt="I">
-                    <img src="./assets/img/R.png" alt="R">
-                    <img src="./assets/img/A.png" alt="A">
-                </div>
-                <ul class="header__language-list">
-                    <li class="header__language-item separate">
-                        <a href="" class="header__language-item-link active-2 ">De</a>
-                    </li>
-                    <li class="header__language-item separate">
-                        <a href="" class="header__language-item-link">Fr</a>
-                    </li>
-                    <li class="header__language-item">
-                        <a href="" class="header__language-item-link">It</a>
-                    </li>
-
-                </ul>
-                <ul class="header__icon-list">
-                    <li class="header_icon-item">
-                        <a href="" class="header__icon-item-link ">
-                            <img src="./assets/img/search.png" alt="">
-                        </a>
-                    </li>
-                    <li class="header_icon-item">
-                        <a href="" class="header__icon-item-link ">
-                            <img src="./assets/img/name.png" alt="">
-                        </a>
-                    </li>
-                    <li class="header_icon-item">
-                        <a href="" class="header__icon-item-link ">
-                            <img src="./assets/img/heart.png" alt="">
-                        </a>
-                    </li>
-                    <li class="header_icon-item">
-                        <a href="" class="header__icon-item-link ">
-                            <img src="./assets/img/cart.png" alt="">
-                        </a>
-                    </li>
-
-                </ul>  
-            </div>
-            <div class="header__submenu p-32">
-                <ul class="header__submenu-list">
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Rings</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Necklaces</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Earings</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Brooches</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Anklets</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Nose pins</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Men</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Women</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Kids</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Couple</a>
-                    </li>
-                    <li class="header__submenu-item">
-                        <a href="" class="header__submenu-item-link">Collections</a>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                            <img src="./assets/img/close.png" alt="Close" class="header__navbar-close">
                     </li>
                 </ul>
             </div>
-
-
-        </div>
+            <div class="header__menu">
+                <ul class="header__menu-list">
+                    <li class="header__menu-item active-3 ">
+                        <a href="" class="header__menu-item-link active-2">Your <br />Jewelry</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-item-link">Engagement <br />& Wedding</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="" class="header__menu-item-link">Fashion <br />& More...</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>    
     </header>
+
+
+    
    </div>
 </header>
 </body>
