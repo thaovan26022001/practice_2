@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+   
+    <link rel="stylesheet" href="./assets/css/master.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;1,100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
     <title>Document</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         <div class="grid wide">
             <div class="header__navbar">
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item">
+                    <li class="header__navbar-item header__navbar-first">
                         <a href="" class="header__navbar-item-link ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none" class="account">
                                 <circle cx="7" cy="4" r="3.5" stroke="#2D2D2D"/>
@@ -28,17 +28,17 @@
                                 </svg>
                         </a>
                     </li>
-                    <li class="header__navbar-item">
-                        <a href="" class="header__navbar-item-link active-1">
+                    <li class="header__navbar-item ">
+                        <a href="" class="header__navbar-item-link header__navbar-active-1">
                             My account
                         </a>
                     </li>
                 </ul>
                 <ul class="header__navbar-list">
-                    <li class="header__navbar-item separate">
-                        <a href="" class="header__navbar-item-link active-1">De</a>
+                    <li class="header__navbar-item header__navbar-separate">
+                        <a href="" class="header__navbar-item-link header-active-2">De</a>
                     </li>
-                    <li class="header__navbar-item separate">
+                    <li class="header__navbar-item header__navbar-separate">
                         <a href="" class="header__navbar-item-link">Fr</a>
                     </li>
                     <li class="header__navbar-item">
@@ -53,27 +53,74 @@
                             </svg>
                     </li>
                 </ul>
-            </div>
-            <div class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item active-3 ">
-                        <a href="" class="header__menu-item-link active-2">Your <br />Jewelry</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-item-link">Engagement <br />& Wedding</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="" class="header__menu-item-link">Fashion <br />& More...</a>
-                    </li>
-                </ul>
             </div> 
-        </div>    
+        </div>  
+        <div class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item  ">
+                    <a href="" class="header__menu-item-link header-active-2">Your Jewelry</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="" class="header__menu-item-link">Engagement & Wedding</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="" class="header__menu-item-link">Fashion & More...</a>
+                </li>
+            </ul>
+        </div>  
     </header>
     <div class="header__submenu">
         <div class="grid wide">
             <ul class="header__submenu-list">
-                li.header
+                <li class="header__submenu-item">
+                    <a href="" class="header__submenu-item-link">Men</a>
+                    <a href="" class="header__submenu-item-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.65662 2.00001L12.3135 7.65686L6.65662 13.3137" stroke="#637284"/>
+                        </svg>                       
+                    </a>
+                </li>
+                <li class="header__submenu-item">
+                    <a href="" class="header__submenu-item-link">Women</a>
+                    <a href="" class="header__submenu-item-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.65662 2.00001L12.3135 7.65686L6.65662 13.3137" stroke="#637284"/>
+                        </svg>                       
+                    </a>
+                </li>
+                <li class="header__submenu-item">
+                    <a href="" class="header__submenu-item-link">Kids</a>
+                    <a href="" class="header__submenu-item-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.65662 2.00001L12.3135 7.65686L6.65662 13.3137" stroke="#637284"/>
+                        </svg>                       
+                    </a>
+                </li>
+                <li class="header__submenu-item">
+                    <a href="" class="header__submenu-item-link">News</a>
+                    <a href="" class="header__submenu-item-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.65662 2.00001L12.3135 7.65686L6.65662 13.3137" stroke="#637284"/>
+                        </svg>                       
+                    </a>
+                </li>
+                <li class="header__submenu-item">
+                    <a href="" class="header__submenu-item-link">Style</a>
+                    <a href="" class="header__submenu-item-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6.65662 2.00001L12.3135 7.65686L6.65662 13.3137" stroke="#637284"/>
+                        </svg>                       
+                    </a>
+                </li>
             </ul>
+            <div class="header__submenu-logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M15 4H6V16H7.76471H15" stroke="#EB6E79"/>
+                    <path d="M9 10H14" stroke="#EB6E79"/>
+                    <path d="M12.4139 8.58579L13.8281 10L12.4139 11.4142" stroke="#EB6E79"/>
+                </svg>
+                Logout
+            </div>
         </div>
     </div>
 

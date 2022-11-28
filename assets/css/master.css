@@ -1,0 +1,125 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.grid.wide {
+  max-width: 343px;
+  margin: 0 auto;
+}
+.fonts-1 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.fonts-2 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.fonts-3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.main {
+  overflow: hidden;
+}
+.header {
+  height: 92px;
+  background-color: #FAFAFA;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 16px;
+}
+.header__navbar-list {
+  display: flex;
+}
+.header__navbar-item {
+  list-style: none;
+  padding-right: 23px;
+  position: relative;
+}
+.header__navbar-item:last-child {
+  padding-right: 0;
+}
+.header__navbar-item-link {
+  color: #637284;
+  text-decoration: none;
+}
+.header__navbar-separate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 12px;
+  border-right: 1px solid #DBDEE6;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+}
+.header__navbar-first {
+  padding-right: 11px;
+}
+.header__navbar-active-1 {
+  color: #000;
+}
+.header__menu {
+  padding-top: 8px;
+}
+.header__menu-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 4px;
+  height: 44px;
+  align-items: center;
+}
+.header__menu-item {
+  list-style: none;
+  padding: 8px 32px;
+  text-align: center;
+}
+.header__menu-item:first-child {
+  border-bottom: 2px solid #2D2D2D;
+}
+.header__menu-item-link {
+  color: #637284;
+  text-decoration: none;
+}
+.header-active-2 {
+  color: #2D2D2D;
+}
+.header__submenu-list {
+  padding-top: 10px;
+}
+.header__submenu-item {
+  align-items: center;
+  border-bottom: 1px solid #DBDEE6;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.header__submenu-item-link {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
