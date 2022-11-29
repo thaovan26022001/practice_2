@@ -19,7 +19,6 @@ html {
 }
 
 .grid.wide {
-    max-width: 343px;
     margin: 0 auto;
 }
 
@@ -43,6 +42,11 @@ html {
     font-weight: 700;
 }
 
+.fonts-4 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .display-flex {
     display: flex;
     justify-content: space-between;
@@ -50,15 +54,18 @@ html {
 .main {
     overflow: hidden;
 }
+//HEADER FIRST
 
 .header {
     height: 92px;
     background-color: @header-color;
 
+
     &__navbar {
         .display-flex();
         .fonts-1();
-        padding-top: 16px;
+        padding: 16px 16px 0 16px;
+        align-items: center;
 
         &-list {
             display: flex;
@@ -95,10 +102,9 @@ html {
         }
 
         &-active-1 {
+            text-transform: none;
             color: @black-color;
         }
-
-
     }
 
     &__menu {
@@ -106,26 +112,33 @@ html {
         &-list {
             .display-flex();
             .fonts-2();
-            padding-left: 4px;
+            padding: 0 4px 0 3px;
             height: 44px;
             align-items: center;
+            position: relative;
         }
-
+        
         &-item {
             list-style: none;
-            padding: 8px 32px;
+            padding: 8px 30px;
             text-align: center;
-
-            &:first-child {
-                border-bottom: 2px solid @black-color-text;
-
-            }
-
 
             &-link {
                 color: @text-color;
                 text-decoration: none;
+                &:first-child{
+                    &::after {
+                        width: 110px;
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        border-bottom: 2px solid @black-color-text;
+                        top: 100%;
+                        left: 4px;
+                        right: 4px;
 
+                    }
+                }
             }
         }
 
@@ -133,32 +146,94 @@ html {
 
     &-active-2 {
         color: @black-color-text;
-
     }
 
-}
-
-.header__submenu {
-
-    &-list {
-        padding-top: 10px;
-
-    }
+    &__firstmenu {
+        cursor: pointer;
     
-    &-item {
-        align-items: center;
-        border-bottom: 1px solid @gray-line-color;
-        height: 44px;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-
-        &-link {
+        &-list {
             color: @black-color-text;
             .fonts-3();
+            padding: 10px 20px 24px 21px;
+        }
+        
+        &-item {
+            align-items: center;
+            border-bottom: 1px solid @gray-line-color;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding-right: 13px;
+        }
+    
+        &-logout-link {
+            text-decoration: none;
+            color: @black-color-text;
+            align-items: center;
+            padding-left: 20px;
+            display: flex;
+            .fonts-1();
+    
+            & svg {
+                padding-right: 8px;
+            }
+        }
+
+    }
+
+    //header_second
+
+    &__secondmenu {
+        
+
+        &-title {
+            height: 50px;
+            background-color: @header-color;
+            .display-flex();
+            align-items: center;
+            padding: 0 16px;
+            color: @black-color-text;
+            .fonts-3();
+
+        }
+
+        &-service {
+            display: block;
+            padding: 24px 22px 0 40px;
+
+        }
+
+        &-content {
+            color: @black-color-text;
+            .fonts-4();
+            padding-bottom: 24px ;
+
+            &:nth-of-type(2) {
+                padding-top: 40px;
+            }
+            
+        }
+
+        &-link {
             text-decoration: none;
 
         }
-    }
-}
+         &-list {
 
+         }
+
+         &-item {
+            display: flex;
+            height: 44px;
+            .fonts-1();
+            color: @black-color-text;
+            align-items: center;
+            border-bottom: 1px solid @gray-line-color;
+         }
+    }
+
+    
+    
+
+}
