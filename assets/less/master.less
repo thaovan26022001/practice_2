@@ -1,5 +1,4 @@
-// @import "overrides.less";
-// @import "variables.less";
+
 * {
     box-sizing: inherit;
     margin: 0;
@@ -21,12 +20,14 @@ html {
 .grid.wide {
     margin: 0 auto;
 }
-
+@noti-color: #EB6E79;
 @black-color: #000;
 @black-color-text: #2D2D2D;
 @text-color: #637284;
 @gray-line-color: #DBDEE6;
 @header-color: #FAFAFA;
+@border-color: #DBDEE5;
+@white-color: #FFF;
 
 .fonts-1 {
     font-size: 14px;
@@ -57,9 +58,54 @@ html {
 //HEADER FIRST
 
 .header {
-    height: 92px;
-    background-color: @header-color;
+    &__mobile {
 
+        &-notifi {
+            height: 26px;
+            display: block;
+            line-height: 26px;
+            padding-left: 10px;
+            background-color: @noti-color;
+            .fonts-2();
+            color: @white-color;
+        }
+        
+        &-title {
+            .display-flex();
+            padding: 0 12px;
+            align-items: center;
+            height: 35px;
+            border-bottom: 1px solid @border-color;
+
+        }
+
+        &-list {
+            .display-flex();
+        }
+
+        &-item {
+            list-style: none;
+            padding-right: 12px;
+        }
+    }
+
+    &__content {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        
+        
+    }
+
+    &__menu {
+        
+        height: 92px;
+        background-color: @header-color;
+
+    }
 
     &__navbar {
         .display-flex();
@@ -107,7 +153,7 @@ html {
         }
     }
 
-    &__menu {
+    &__category {
         padding-top: 8px;
         &-list {
             .display-flex();
@@ -149,7 +195,6 @@ html {
     }
 
     &__firstmenu {
-        cursor: pointer;
     
         &-list {
             color: @black-color-text;
@@ -158,13 +203,15 @@ html {
         }
         
         &-item {
+            cursor: pointer;
             align-items: center;
-            border-bottom: 1px solid @gray-line-color;
+            border-bottom: 1px solid @border-color;
             height: 44px;
             display: flex;
             justify-content: space-between;
             list-style: none;
             padding-right: 13px;
+            position: relative;
         }
     
         &-logout-link {
@@ -183,10 +230,31 @@ html {
     }
 
     //header_second
+    
+    &__modal {
+        overflow-y: scroll;
+        z-index: 1000;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+
+        &&-open {
+            display: block;
+        }
+    
+        
+    
+    }
 
     &__secondmenu {
-        
-
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+    
         &-title {
             height: 50px;
             background-color: @header-color;
@@ -195,6 +263,10 @@ html {
             padding: 0 16px;
             color: @black-color-text;
             .fonts-3();
+
+            & svg {
+                cursor: pointer;
+            }
 
         }
 
@@ -229,11 +301,8 @@ html {
             .fonts-1();
             color: @black-color-text;
             align-items: center;
-            border-bottom: 1px solid @gray-line-color;
+            border-bottom: 1px solid @border-color;
          }
     }
-
-    
-    
 
 }
