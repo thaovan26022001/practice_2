@@ -1,57 +1,5 @@
 
-* {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-}
-html {
-    font-size: 62.5%;
-    line-height: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
-    box-sizing: border-box;
-}
 
-.grid {
-    width: 100%;
-    display: block;
-    padding: 0;
-}
-
-.grid.wide {
-    margin: 0 auto;
-}
-@noti-color: #EB6E79;
-@black-color: #000;
-@black-color-text: #2D2D2D;
-@text-color: #637284;
-@gray-line-color: #DBDEE6;
-@header-color: #FAFAFA;
-@border-color: #DBDEE5;
-@white-color: #FFF;
-
-.fonts-1 {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.fonts-2 {
-    font-size: 12px;
-    font-weight: 500;
-}
-.fonts-3 {
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.fonts-4 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.display-flex {
-    display: flex;
-    justify-content: space-between;
-}
 .main {
     overflow: hidden;
 }
@@ -73,9 +21,8 @@ html {
         
         &-title {
             .display-flex();
-            padding: 0 12px;
             align-items: center;
-            padding: 4px 0 7px 0;
+            padding: 4px 12px 7px 12px;
             border-bottom: 1px solid @border-color;
             
 
@@ -104,12 +51,12 @@ html {
         display: none;
         &&-open {
             display: block;
-        }
-        
-        
+        }     
     }
 
     &__menu {
+        display: flex;
+        flex-direction: column;
 
         background-color: @header-color;
 
@@ -147,7 +94,7 @@ html {
             height: 12px;
             border-right: 1px solid @gray-line-color;
             right: 12px;
-            top: 40%;
+            top: 50%;
             transform: translateY(-50%);
         }
 
@@ -203,6 +150,7 @@ html {
     }
 
     &__firstmenu {
+        background-color: @white-color;
     
         &-list {
             color: @black-color-text;
@@ -299,9 +247,6 @@ html {
             text-decoration: none;
 
         }
-         &-list {
-
-         }
 
          &-item {
             display: flex;
@@ -312,19 +257,13 @@ html {
             border-bottom: 1px solid @border-color;
          }
     }
-    @media screen and (min-width: 480px){
-        &__mobile {
-            &-notifi {
-                height: 32px;
-                line-height: 32px;
-                text-align: center;
-            }
-        }
-        &__content {
-            display: block;
-            position: static;
-        }
-    }
+   
 
 
 }
+
+
+
+@import '_grid.less';
+@import '_base.less';
+@import '_responsive.less';

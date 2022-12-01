@@ -1,0 +1,14 @@
+@media screen and (min-width: 480px) {
+  .header {
+    &__mobile-notifi {
+      text-align: center;
+    }
+    
+    &__content {
+      display: block;
+      position: static;
+    }
+
+  }
+
+}

@@ -1,0 +1,39 @@
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+.grid {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.grid.wide {
+  margin: 0 auto;
+}
+.fonts-1 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.fonts-2 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.fonts-3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.fonts-4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.display-flex {
+  display: flex;
+  justify-content: space-between;
+}
