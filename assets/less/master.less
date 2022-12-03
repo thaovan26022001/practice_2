@@ -1,4 +1,4 @@
-
+@import '_base.less';
 
 .main {
     overflow: hidden;
@@ -6,8 +6,11 @@
 //HEADER FIRST
 
 .header {
+
+
     
     &__mobile {
+        border-bottom: 1px solid @border-color;
 
         &-notifi {
             height: 26px;
@@ -20,23 +23,34 @@
         }
         
         &-title {
+
             .display-flex();
             align-items: center;
-            padding: 4px 12px 7px 12px;
-            border-bottom: 1px solid @border-color;
-            
-
+            padding: 4px 0 7px 0;
         }
 
         &-list {
             .display-flex();
+  
         }
 
         &-item {
             list-style: none;
             padding-right: 12px;
             cursor: pointer;
+            &:last-child {
+                padding-right: 0;
+            }
+            &-link {
+                .fonts-1();
+                color: @text-color;
+                text-decoration: none;
+            }
         }
+    }
+
+    &__hide {
+        display: flex;
     }
 
     &-icon {
@@ -55,17 +69,13 @@
     }
 
     &__menu {
-        display: flex;
-        flex-direction: column;
-
-        background-color: @header-color;
 
     }
+    
 
     &__navbar {
         .display-flex();
         .fonts-1();
-        padding: 16px 16px 0 16px;
         align-items: center;
 
         &-list {
@@ -82,6 +92,7 @@
             }
 
             &-link {
+                .fonts-1();
                 color: @text-color;
                 text-decoration: none;
             }
@@ -109,40 +120,35 @@
     }
 
     &__category {
-        padding-top: 8px;
         &-list {
             .display-flex();
             .fonts-2();
-            padding: 0 4px 0 3px;
             height: 44px;
             align-items: center;
-            position: relative;
         }
         
         &-item {
             list-style: none;
-            padding: 8px 30px;
             text-align: center;
+            position: relative;
 
-            &-link {
-                color: @text-color;
-                text-decoration: none;
-                &:first-child{
-                    &::after {
-                        width: 110px;
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        border-bottom: 2px solid @black-color-text;
-                        top: 100%;
-                        left: 4px;
-                        right: 4px;
-
-                    }
+            &:first-child{
+                &::after {
+                    content: "";
+                    border-bottom: 2px solid @black-color-text;
+                    position: absolute;
+                    top: 100%;
+                    right: 20px;
+                    left: 20px;
                 }
             }
+            
+            &-link {
+                .fonts-2();
+                color: @text-color;
+                text-decoration: none;
+            }  
         }
-
     }
 
     &-active-2 {
@@ -182,7 +188,6 @@
                 padding-right: 8px;
             }
         }
-
     }
 
     //header_second
@@ -201,9 +206,6 @@
         &&-open {
             display: block;
         }
-    
-        
-    
     }
 
     &__secondmenu {
@@ -223,13 +225,11 @@
             & svg {
                 cursor: pointer;
             }
-
         }
 
         &-service {
             display: block;
             padding: 24px 22px 0 40px;
-
         }
 
         &-content {
@@ -239,13 +239,11 @@
 
             &:nth-of-type(2) {
                 padding-top: 40px;
-            }
-            
+            }          
         }
 
         &-link {
             text-decoration: none;
-
         }
 
          &-item {
@@ -257,13 +255,26 @@
             border-bottom: 1px solid @border-color;
          }
     }
-   
 
+    //HEADER__SUBMENU
+    &__submenu {
+        &-list {
+            display: flex;
+            gap: 40px;
+            &-item {
+                &-link {
+                    text-decoration: none;
+
+
+                }
+            }
+        }
+
+    }
 
 }
 
 
 
 @import '_grid.less';
-@import '_base.less';
 @import '_responsive.less';

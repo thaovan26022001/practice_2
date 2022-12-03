@@ -1,8 +1,5 @@
 @media screen and (max-width: 767px){
     .header {
-        &__avatar {
-            display: none;
-        }
         &__mobile {
             &-list {
                 display: flex;
@@ -10,7 +7,35 @@
         }
         &__hide {
             display: none;
+
         }
+        &__navbar {
+            padding: 16px 16px 0 16px;
+        }
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            background-color: @header-color;
+        }
+
+        &__logo-big {
+            display: none;
+        }
+        &__category {
+            &-list {
+                padding: 0 4px 0 3px;
+            }
+
+            &-item {
+                padding: 8px 30px;
+            
+            }
+        }
+
+        &__submenu {
+            display: none;
+        }
+
     }
 
 
@@ -18,47 +43,77 @@
 
 @media screen and (min-width: 768px){
     .header {
+        &__hide-on-pc {
+            display: none;
+        }
+
         &__content {
             display: block;
             position: static;
         }
-        &__navbar {
-            &-list:first-child {
-                display: none;
 
-            }
+        &__navbar {
+            padding: 0;
 
             &-list:last-child {
                 display: none;
             }
-        }
-        &__menu {
-            background-color: @white-color;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        &__avatar {
-            display: block;
+
+            &-item {
+                &-link {
+                    .fonts-1();
+                }
+            }
 
         }
+        
+        &__menu {
+            display: flex;
+        }
+        
+        &__logo-small {
+            display: none;
+        }
+        
 
 
         &__mobile {
 
             &-notifi {
+                .fonts-3();
                 text-align: center;   
                 height: 32px;
                 line-height: 32px;
             }
-            
             &-title {
-                display: none;
-                
-                
+                flex-direction: row-reverse;
             }
+            &-list {
+                &:nth-child(4) {
+                    order: -1;
+                }
+            }
+
             
+        }
+        &__category {
+            &-item {
+                &:first-child{
+                    &::after {
+                        border-bottom: 1px solid @black-color-text;
+                        top: calc(100% + 12px);
+                        right: 22px;
+                        left: 0;
+                    }
+                }
+                &-link {
+                    .fonts-1();
+                    padding-right:24px;
+                    & p {
+                        display: none;
+                    }  
+                }
+            }
         }
 
         &__firstmenu {
