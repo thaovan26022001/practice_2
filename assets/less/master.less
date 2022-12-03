@@ -6,8 +6,6 @@
 //HEADER FIRST
 
 .header {
-
-
     
     &__mobile {
         border-bottom: 1px solid @border-color;
@@ -26,7 +24,7 @@
 
             .display-flex();
             align-items: center;
-            padding: 4px 0 7px 0;
+            padding: 4px 12px 7px 12px;
         }
 
         &-list {
@@ -72,7 +70,6 @@
 
     }
     
-
     &__navbar {
         .display-flex();
         .fonts-1();
@@ -258,20 +255,95 @@
 
     //HEADER__SUBMENU
     &__submenu {
+        padding: 0 32px;
         &-list {
+            height: 52px;
             display: flex;
             gap: 40px;
-            &-item {
-                &-link {
-                    text-decoration: none;
+            align-items: center;
+        }
+
+        &-item {
+            list-style: none;
+            &-link {
+                text-transform: capitalize;
+                text-decoration: none;
+                .fonts-1();
+                color: @black-color-text
 
 
-                }
             }
         }
 
     }
 
+}
+
+.article {
+    display: flex;
+    padding: 0 32px;
+
+    &__container {
+        padding-top: 24px;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        &-link {
+            text-decoration: none;
+            .fonts-6();
+            color: @black-color-text;
+            text-transform: capitalize;
+        }
+
+    }
+
+    &__infor {
+        width: 469px;
+        height: 410px;
+
+        &-title {
+            .fonts-7();
+            height: 96px;
+            line-height: 48px;
+            margin-bottom: 24px;
+            text-transform: capitalize;
+
+        }
+
+        &-content {
+            .fonts-8();
+            line-height: 28px;
+            color: @black-color-text;
+            text-align: justify;
+            padding-bottom: 64px;
+        }
+    }
+    &__submenu {
+        &-list {
+
+        }
+        &-item {
+            cursor: pointer;
+            .display-flex();
+            align-items: center;
+            list-style: none;
+            height: 56px;
+            .fonts-3();
+            border-top: 1px solid @border-color;
+
+            &:last-child {
+            border-bottom: 1px solid @border-color;
+
+            }
+
+        }
+    }
+    &-img {
+        background: url(../svg/DSC08071\ \(1\)\ 1.png) no-repeat top center / cover;
+    }
+ 
 }
 
 

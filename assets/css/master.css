@@ -34,6 +34,18 @@ html {
   font-size: 12px;
   font-weight: 600;
 }
+.fonts-6 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.fonts-7 {
+  font-size: 48px;
+  font-weight: 600;
+}
+.fonts-8 {
+  font-size: 20px;
+  font-weight: 400;
+}
 .display-flex {
   display: flex;
   justify-content: space-between;
@@ -58,7 +70,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 0 7px 0;
+  padding: 4px 12px 7px 12px;
 }
 .header__mobile-list {
   display: flex;
@@ -256,12 +268,79 @@ html {
   align-items: center;
   border-bottom: 1px solid #DBDEE5;
 }
+.header__submenu {
+  padding: 0 32px;
+}
 .header__submenu-list {
+  height: 52px;
   display: flex;
   gap: 40px;
+  align-items: center;
 }
-.header__submenu-list-item-link {
+.header__submenu-item {
+  list-style: none;
+}
+.header__submenu-item-link {
+  text-transform: capitalize;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+}
+.article {
+  display: flex;
+  padding: 0 32px;
+}
+.article__container {
+  padding-top: 24px;
+}
+.article__navigation {
+  display: flex;
+  align-items: center;
+}
+.article__navigation-link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #2D2D2D;
+  text-transform: capitalize;
+}
+.article__infor {
+  width: 469px;
+  height: 410px;
+}
+.article__infor-title {
+  font-size: 48px;
+  font-weight: 600;
+  height: 96px;
+  line-height: 48px;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+.article__infor-content {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #2D2D2D;
+  text-align: justify;
+  padding-bottom: 64px;
+}
+.article__submenu-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: 56px;
+  font-size: 14px;
+  font-weight: 700;
+  border-top: 1px solid #DBDEE5;
+}
+.article__submenu-item:last-child {
+  border-bottom: 1px solid #DBDEE5;
+}
+.article-img {
+  background: url(../svg/DSC08071\ \(1\)\ 1.png) no-repeat top center / cover;
 }
 @media screen and (max-width: 767px) {
   .grid.wide {
@@ -283,6 +362,11 @@ html {
   .grid.wide {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  .l-6 {
+    display: block;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -345,6 +429,7 @@ html {
     line-height: 32px;
   }
   .header__mobile-title {
+    padding: 8px 32px;
     flex-direction: row-reverse;
   }
   .header__mobile-list:nth-child(4) {
@@ -352,7 +437,7 @@ html {
   }
   .header__category-item:first-child::after {
     border-bottom: 1px solid #2D2D2D;
-    top: calc(100% + 12px);
+    top: calc(100% + 14px);
     right: 22px;
     left: 0;
   }
