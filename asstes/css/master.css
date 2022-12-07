@@ -46,6 +46,14 @@ html {
   font-size: 20px;
   font-weight: 400;
 }
+.fonts-9 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.fonts-10 {
+  font-size: 14px;
+  font-weight: 500;
+}
 .display-flex {
   display: flex;
   justify-content: space-between;
@@ -274,11 +282,11 @@ html {
 .header__submenu-list {
   height: 52px;
   display: flex;
-  gap: 40px;
   align-items: center;
 }
 .header__submenu-item {
   list-style: none;
+  padding-right: 40px;
 }
 .header__submenu-item-link {
   text-transform: capitalize;
@@ -291,8 +299,14 @@ html {
   display: flex;
   padding: 0 32px;
 }
+.article__present {
+  display: grid;
+  gap: 119px;
+}
 .article__container {
   padding-top: 24px;
+  display: grid;
+  gap: 119px;
 }
 .article__navigation {
   display: flex;
@@ -306,15 +320,14 @@ html {
   text-transform: capitalize;
 }
 .article__infor {
-  width: 469px;
-  height: 410px;
+  width: 466px;
 }
 .article__infor-title {
   font-size: 48px;
   font-weight: 600;
   height: 96px;
   line-height: 48px;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
   text-transform: capitalize;
 }
 .article__infor-content {
@@ -339,10 +352,15 @@ html {
 .article__submenu-item:last-child {
   border-bottom: 1px solid #DBDEE5;
 }
-.article-img {
-  background: url(../svg/DSC08071\ \(1\)\ 1.png) no-repeat top center / cover;
+.article__img {
+  padding-top: 100%;
+  background-image: url(../svg/logo.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 739px) {
   .grid.wide {
     max-width: 343px;
     margin: 0 auto;
@@ -357,19 +375,19 @@ html {
     padding-left: 4px;
     padding-right: 4px;
   }
-}
-@media screen and (min-width: 768px) {
-  .grid.wide {
-    max-width: 1200px;
-    margin: 0 auto;
+  .c-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
+}
+@media screen and (min-width: 740px) {
   .l-6 {
     display: block;
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 739px) {
   .header__mobile-list {
     display: flex;
   }
@@ -391,13 +409,14 @@ html {
     padding: 0 4px 0 3px;
   }
   .header__category-item {
-    padding: 8px 30px;
+    padding: 8px 20px;
+    width: 118px;
   }
   .header__submenu {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 740px) and (max-width: 1023px) {
   .header__hide-on-pc {
     display: none;
   }
@@ -408,11 +427,14 @@ html {
   .header__navbar {
     padding: 0;
   }
-  .header__navbar-list:last-child {
-    display: none;
+  .header__navbar-list {
+    padding: 0 12px;
+  }
+  .header__navbar-list :last-child {
+    padding-right: 0;
   }
   .header__navbar-item-link {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
   }
   .header__menu {
@@ -438,13 +460,84 @@ html {
   .header__category-item:first-child::after {
     border-bottom: 1px solid #2D2D2D;
     top: calc(100% + 14px);
-    right: 22px;
+    right: -2px;
     left: 0;
+  }
+  .header__category-item-link {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .header__category-item-link p {
+    display: none;
+  }
+  .header__firstmenu {
+    display: none;
+  }
+  .header__submenu-item {
+    padding-right: 12px;
+  }
+  .header__submenu-item:last-child {
+    padding-right: 0;
+  }
+  .header__submenu-item-link {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .article__present {
+    gap: 76px;
+  }
+  .article__infor {
+    width: 306px;
+  }
+  .article__infor-title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .article__infor-content {
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 48px;
+  }
+}
+@media (min-width: 1024px) {
+  .header__hide-on-pc {
+    display: none;
+  }
+  .header__content {
+    display: block;
+    position: static;
+  }
+  .header__menu {
+    display: flex;
+  }
+  .header__logo-small {
+    display: none;
+  }
+  .header__mobile-notifi {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+  }
+  .header__mobile-title {
+    padding: 8px 32px;
+    flex-direction: row-reverse;
+  }
+  .header__mobile-list:nth-child(4) {
+    order: -1;
+  }
+  .header__category-item {
+    padding-right: 40px;
+  }
+  .header__category-item:first-child::after {
+    left: -3px;
+    right: 36px;
+    top: calc(100% + 20px);
   }
   .header__category-item-link {
     font-size: 14px;
     font-weight: 500;
-    padding-right: 24px;
   }
   .header__category-item-link p {
     display: none;

@@ -319,9 +319,6 @@ html {
   color: #2D2D2D;
   text-transform: capitalize;
 }
-.article__infor {
-  width: 466px;
-}
 .article__infor-title {
   font-size: 48px;
   font-weight: 600;
@@ -354,7 +351,7 @@ html {
 }
 .article__img {
   padding-top: 100%;
-  background-image: url(../svg/image.png);
+  background-image: url(../svg/logo.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -374,6 +371,10 @@ html {
   .col {
     padding-left: 4px;
     padding-right: 4px;
+  }
+  .c-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 740px) {
@@ -411,7 +412,7 @@ html {
   .header__submenu {
     display: none;
   }
-  .main {
+  .article {
     display: none;
   }
 }
@@ -543,5 +544,8 @@ html {
   }
   .header__firstmenu {
     display: none;
+  }
+  .article__infor {
+    width: 466px;
   }
 }
