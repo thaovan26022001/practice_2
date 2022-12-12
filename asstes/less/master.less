@@ -1,10 +1,7 @@
-@import '_base.less'; 
-
 .wapper {
     overflow: hidden;
 }
  
-
 .header {
     
     &__mobile {
@@ -47,15 +44,13 @@
         }
     }
 
-    &__hide {
-        display: flex;
-    }
-
     &-icon {
         cursor: pointer;
     }
     &__content {
         position: fixed;
+        background-color: @white-color;
+        z-index: 1000;
         top: 0;
         right: 0;
         bottom: 0;
@@ -68,6 +63,8 @@
     }
 
     &__menu {
+        background-color: @header-color;
+        padding: 0 16px;
 
     }
 
@@ -76,12 +73,14 @@
     }
     
     &__navbar {
+        padding: 16px 16px 0 16px;
         .display-flex();
         .fonts-1();
         align-items: center;
 
         &-list {
             display: flex;
+            
         }
 
         &-item {
@@ -121,19 +120,25 @@
         }
     }
 
+    &__hide {
+        display: none;
+    }
+
     &__category {
         &-list {
             .display-flex();
             .fonts-2();
             height: 44px;
             align-items: center;
+            padding: 0 4px 0 3px;
         }
         
         &-item {
             list-style: none;
             text-align: center;
+            
             position: relative;
-
+        
             &:first-child{
                 &::after {
                     content: "";
@@ -150,6 +155,9 @@
                 color: @text-color;
                 text-decoration: none;
             }  
+            &:first-child a{
+                color: @black-color-text;
+            }
         }
     }
 
@@ -286,22 +294,15 @@
 
 }
 
-.main {
-    display: none;
-}
-
 .article {
-    display: flex;
     padding: 0 32px;
     &__present {
-        display: grid;
-        gap: 119px;
+       
     }
 
     &__container {
         padding-top: 24px;
-        display: grid;
-        gap: 119px;
+        
     }
 
     &__navigation {
@@ -317,13 +318,12 @@
     }
 
     &__infor {
+        margin-top: 24px;
+        margin-bottom: 26px;
   
-
         &-title {
             .fonts-7();
-            height: 96px;
             line-height: 48px;
-            margin: 0 0 24px 0;
             text-transform: capitalize;
 
         }
@@ -341,6 +341,7 @@
 
         }
         &-item {
+            text-transform: uppercase;
             cursor: pointer;
             .display-flex();
             align-items: center;
@@ -368,38 +369,43 @@
     
  
 }
+.hidden {
+    display: none;
+}
 
 .footer {
-    display: none;
     padding-top: 64px;
     &__heading {
         background-color: @noti-color;
         padding: 0 19px;
-        height: 48px;
+       
 
         &-close {
+            display: none;
             float: right;
             padding-top: 14px;
-
         }
-    
 
         &-list {
-            display: flex;
-            justify-content: space-evenly;   
-            align-items: center;
-            line-height: 48px;
+            display: grid;
+            grid-template-columns: auto auto; 
+            row-gap: 12px;  
+            padding-top: 26px;
+            padding-bottom: 20px;
+            column-gap: 14px;
+
         }
 
         &-item {
+           
             list-style: none;
 
             &-link {
                 text-decoration: none;
                 .fonts-3();
-                color: @white-color;
-                
+                color: @white-color; 
             }
+            
         }
     }
 
@@ -414,12 +420,12 @@
             justify-content: center; 
         }
         & h2 {
-            .fonts-4 ();
+            .fonts-3 ();
             padding-bottom: 12px;
         }
 
         & p {
-            .fonts-1();
+            .fonts-2();
             padding-bottom: 21px;
         }
        
@@ -465,48 +471,26 @@
         padding: 0 32px;
         position: relative;
 
-        &-list {
-            display: flex;
+        &-list {    
             align-items: center;
             padding: 24px 0;
             border-bottom: 1px solid @gray-line-color;
             border-top: 1px solid @gray-line-color;
-
+            display: flex;
+            flex-wrap: wrap;
         }
 
         &-item {
+            
             flex: 1;
-            list-style: none;
+            list-style: none;       
         }
 
         &-img {
             height: 100%;
             display: block;
-            position: relative;
 
-            &::after {
-                
-                display: none;
-                content: "";
-                position: absolute;
-                top: 40%;
-                left: 0;
-                right: 40px;
-                height: 60%;
-                border-right: 1px solid @gray-line-color;
-                transform: translateY(-50%);   
-            
-            }   
-            
-            &:last-child::after {
-                display: none ;
-            }
-           
-           
-
-            
         }
-        
     
     }
 
@@ -528,7 +512,7 @@
 
             & h2 {
                 padding-right: 12px;
-                .fonts-11();
+                .fonts-10();
                 color: @black-color-text;
             }
             & p {
@@ -547,11 +531,7 @@
             cursor: pointer;
 
         }
-        &-help {
-            padding-top: 79px;
-        }
-
-    
+         
         &-item {
             list-style: none;
             padding-bottom: 20px;
@@ -559,9 +539,19 @@
 
         &-link {
             text-decoration: none;
-            .fonts-11();
+            .fonts-10();
             color: @black-color-text;
             line-height: 1.8;
+        }
+
+        &-finish {
+            padding-top: 28px;
+            padding-bottom: 16px;
+            &-link {
+                .fonts-10();
+                color: @text-color;
+                text-decoration: none;
+            }
         }
 
         &-badges {
@@ -574,6 +564,7 @@
     }
     
     &__social {
+        padding-bottom: 48px;
         &-link {
             text-decoration: none;
             padding-left: 8px;
@@ -581,9 +572,9 @@
     }
 
     &__bottom {
-        .display-flex();
+       
         padding: 0 32px 20px 32px;
-        align-items: center;
+        display: block;
         &-country {
             display: flex;
             .fonts-3();
@@ -595,19 +586,14 @@
 
         }
 
-        &-year {
-           color: @text-color;
-           .fonts-1();
-
-        }
-
         &-list {
-            display: flex;
+           padding: 16px 37px 48px 37px;
         }
 
         &-item {
             list-style: none;
             padding-right: 20px;
+            padding-bottom: 16px;
 
             &:last-child {
                 padding-right: 0;
@@ -623,6 +609,13 @@
                 color: @black-color-text;
             }
         }
+        
+        &-year {
+            color: @text-color;
+            .fonts-1();
+            padding: 0 37px;
+ 
+         }
     }
 }
 
@@ -630,3 +623,4 @@
 
 @import '_grid.less';
 @import '_responsive.less';
+@import '_base.less'; 
