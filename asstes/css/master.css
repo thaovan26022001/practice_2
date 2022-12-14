@@ -311,6 +311,121 @@
 .hidden {
   display: none;
 }
+.container {
+  padding: 0 32px;
+}
+.container-nav {
+  padding: 60px 0;
+}
+.container__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2D2D2D;
+}
+.container__list {
+  display: flex;
+  padding: 16px 0;
+}
+.container__list-item {
+  list-style: none;
+  flex: 1;
+  height: 44px;
+  text-align: center;
+  border-bottom: 1px solid #DBDEE5;
+}
+.container__list-item:last-child {
+  border-bottom: 1px solid #EB6E79;
+}
+.container__list-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+  text-decoration: none;
+  line-height: 44px;
+}
+.container__product {
+  display: flex;
+}
+.container__product-link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  border: 1px solid #DBDEE6;
+  border-radius: 2px;
+  width: 160px;
+}
+.container__product-link:hover {
+  transform: translateY(-4px);
+  transition: transform linear 0.3s;
+  will-change: transform;
+}
+.container__product-link p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D2D2D;
+  width: 50%;
+  text-align: center;
+}
+.container__product-link img {
+  width: 50%;
+}
+.container__cate-desc h2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+.container__cate-desc p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 140%;
+  padding: 20px 0;
+  text-align: justify;
+}
+.container__cate-image {
+  padding-top: 20px;
+}
+.container__best {
+  padding-top: 60px;
+}
+.container__best h2 {
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 40px;
+}
+.container__best-item {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+.container__best-item-img {
+  position: relative;
+}
+.container__best-item-img img {
+  width: 100%;
+  height: 100%;
+}
+.container__best-item-heart {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.container__best-item-diamond {
+  position: absolute;
+  top: calc(100% - 30px);
+  left: 0;
+}
+.container__best p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2D2D2D;
+  line-height: 140%;
+  padding-bottom: 4px;
+}
+.container__best-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2D2D2D;
+}
 .footer {
   padding-top: 64px;
 }
@@ -405,9 +520,14 @@
   flex: 1;
   list-style: none;
 }
+.footer__sponsor-item:first-child img {
+  margin: 0;
+}
 .footer__sponsor-img {
   height: 100%;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__contact {
   display: flex;
@@ -525,10 +645,15 @@
   padding-left: 4px;
   padding-right: 4px;
 }
-.c-6,
+.c-3,
 .c-4,
+.c-6,
 .c-12 {
   display: block;
+}
+.c-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
 }
 .c-4 {
   flex: 0 0 33.33333%;
@@ -687,7 +812,7 @@
     top: 40%;
     transform: translateY(-50%);
   }
-  .footer__sponsor-item::before:last-child ::before {
+  .footer__sponsor-item:first-child::before {
     display: none ;
   }
   .footer__contact-help {
@@ -716,14 +841,42 @@
     padding-right: 0;
   }
 }
-@media (max-width: 768px) {
-  .article .article__infor-title {
+@media (min-width: 768px) {
+  .header__category-item:first-child {
+    position: relative;
+  }
+  .header__category-item:first-child::after {
+    top: calc(100% + 5px);
+    right: -4px;
+    left: -7px;
+    content: "";
+    border-bottom: 2px solid #2D2D2D;
+    position: absolute;
+  }
+  .article__infor-title {
     font-size: 36px;
     font-weight: 600;
   }
-  .article .article__infor-content {
-    font-size: 16px;
-    font-weight: 500;
+  .article__infor-content {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .container__title {
+    font-size: 32px;
+    font-weight: 600;
+  }
+  .container__list {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+  .container__cate-desc h2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .container__cate-desc p {
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 @media (max-width: 420px) {
@@ -741,11 +894,11 @@
     padding: 8px 20px;
     width: 118px;
   }
-  .article .article__infor-title {
+  .article__infor-title {
     font-size: 26px;
     font-weight: 600;
   }
-  .article .article__infor-content {
+  .article__infor-content {
     font-size: 14px;
     font-weight: 500;
   }
@@ -765,6 +918,11 @@ html {
   width: 100%;
   display: block;
   padding: 0;
+}
+.transition-up {
+  transform: translateY(-4px);
+  transition: transform linear 0.3s;
+  will-change: transform;
 }
 .fonts-1 {
   font-size: 14px;
@@ -817,6 +975,10 @@ html {
 .fonts-13 {
   font-size: 16px;
   font-weight: 500;
+}
+.fonts-14 {
+  font-size: 32px;
+  font-weight: 600;
 }
 .display-flex {
   display: flex;
