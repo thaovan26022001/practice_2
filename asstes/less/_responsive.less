@@ -1,10 +1,9 @@
 @media (max-width: 420px) {
     .header {
         &__navbar {
-            padding: 16px 16px 0 16px;
+            padding: 16px;
         }
         &__menu {
-            
             flex-direction: column;
             background-color: @header-color;
         }
@@ -17,8 +16,7 @@
 
             &-item {
                 padding: 8px 20px;
-                width: 118px;
-            
+                width: 118px;    
             }
         }
     }
@@ -27,18 +25,21 @@
         &__infor {
             &-title {
                 .fonts-12();
-
             }
 
             &-content {
                 .fonts-1();
-
             }
         }
-
     }
-
-
+    
+    .banner {
+        &__desc {
+            &-content {
+                padding-bottom: 60px;
+            }
+        }
+    }
 }   
     
 @media (min-width: 768px) {
@@ -77,13 +78,8 @@
     }
 
     .container {
-        &-nav {
-
-        }
-
         &__title {
             .fonts-14();
-
         }
 
         &__list {
@@ -91,25 +87,28 @@
             padding-bottom: 16px;
 
         }
-
-        &__product {
-            
-            &-link {
-
-            }
-        }
         &__cate {
             &-desc {
                 & h2 {
                     .fonts-14;
                     text-align: center;
-
                 }
 
                 & p {
                     .fonts-8();
-
                 }
+            }
+        }
+    }
+
+    .banner {  
+        &__desc {
+            &-title {
+                .fonts-14();                 
+            }
+            
+            &-btn {
+                width: 250px;                  
             }
         }
     }
@@ -157,6 +156,7 @@
         &__menu {
             background-color: @white-color;
             display: flex;
+            padding: 0;
         }
         
         &__logo-small {
@@ -186,8 +186,12 @@
             }
         }
         &__category {
+
+            &-list {
+                padding: 0;
+            }
             &-item {
-                padding-right: 40px;
+                padding-right: 60px;
                 &:last-child {
                     padding-right: 0;
                 }
@@ -257,7 +261,7 @@
 
     .container {
         &-nav {
-            padding-top: 152px;
+            padding-top: 130px;
             padding-bottom: 120px;
         }
 
@@ -316,9 +320,6 @@
                 & h2 {
                     text-align: left;
                 }
-
-                & p {
-                }
             }
 
             &-img {
@@ -352,8 +353,6 @@
                     width: 55%;
                     height: auto;
                 }
-                
-
             }
 
             &-image {
@@ -364,7 +363,8 @@
         }
 
         &__best {
-            padding-top: 120px;
+            padding-top: 140px;
+            padding-bottom: 158px;
             position: relative;
             &-text {
                 & h2 {
@@ -374,47 +374,23 @@
 
             &-item {
                 &-img {
+
+                    & div {
+                        background-size: contain;
+                    }
                 }
 
                 & p {
                     .fonts-1();
                 }
             }
-
-            &-move-left , &-move-right {
-                display: block;
-                position: absolute;
-                top: 65%;
-                z-index: 99999;
-            }
-
-            &-move-left {
-                left: -4px;
-            }
-
-            &-move-right {
-                right: 2px;
-
-            }
-
-            &-price {
-
-            }
         }
 
         &__shop {
-            padding-bottom: 200px;
-       
-            &-img {
-
-            }
 
             &-Jewe {
                 position: relative;
 
-            }
-            .p-l-80 {
-                padding-left: 80px;
             }
 
             &-title {
@@ -426,25 +402,17 @@
                 border: 4px solid #FAFAFA;
                 border-radius: 2px;
                 position: absolute;
-                padding: 80px 0;
+                padding: 80px 0 80px 80px;
                 left: 50%;
                 transform: translateX(-50%);
-                top: calc(100% - 158px);
+                top: calc(100% - 375px);
                 inline-size: 66%;
+    
 
                 & h2 {
                     .fonts-14();
 
                 }
-
-                & p {
-
-                }
-
-                &-btn {
-
-                }
-
                 & svg {
                     display: block;
                 }
@@ -467,6 +435,79 @@
         }
 
     }
+
+    .banner {
+        &__content {
+            display: flex;
+        }
+
+        &__desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 68px;
+
+            &-content {
+                width: 404px;
+            }
+            
+        }
+    }
+
+    .rings {
+
+        &__text {
+            display: grid;
+            grid-template-rows: auto auto;
+            height: 100%;
+            margin-top: 110px;
+
+            &-view {
+
+            }
+
+        }
+
+        &__rectangle{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            order: -1;
+            & svg {
+                &:last-child {
+                    position: absolute;
+                    left: 32px;
+                    top: 32px;
+                }
+            }           
+        }
+
+        &__content {
+            & h2 {
+                .fonts-14();
+            }
+
+        }
+
+        &__img {
+            margin-bottom: 24px;
+            & h4 {
+                .fonts-4();
+            }
+        }
+    }
+
+    .best__seller {
+        & h2 {
+            .fonts-14();
+            padding-top: 60px;
+        }
+        &-img {
+
+        }
+
+    }
+
    
     .footer {
         &__heading {
@@ -551,5 +592,5 @@
     }
 }
 
-    
+
 
