@@ -24,7 +24,8 @@ html {
 @header-color: #FAFAFA;
 @border-color: #DBDEE5;
 @white-color: #FFF;
-@red-color :#EB6E79;
+@background-color: #FCF9F9;
+
 .p-2 {
     padding-top: 2px;
 }
@@ -36,6 +37,7 @@ html {
     .fonts-3();
     height: 42px;
     border-radius: 4px;
+    border: none;
 }
 
 .fonts-1 {
@@ -123,14 +125,31 @@ p {
 
 h2 {
     .fonts-4();
-    line-height: 120%;
-    color: @black-color-text;
+    line-height: 120%;   
 }
 
 h4 {
     .fonts-13();
     line-height: 120%;
     color: @white-color;
+}
+
+h5 {
+    .fonts-3();
+    line-height: 120%;
+}
+
+h6 {
+    .fonts-5();
+    line-height: 120%;
+}
+.img {
+    border-radius: 2px;
+    width: 100%;
+}
+
+.filter {
+    filter: brightness(80%);
 }
 @media (max-width: 420px) {
 
@@ -141,5 +160,9 @@ h4 {
 }
 
 @media (min-width: 1024px) {
+    .h2 {
+        .fonts-4();
+        line-height: 120%;   
+    }
 
 }

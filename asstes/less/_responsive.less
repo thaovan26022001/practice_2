@@ -20,18 +20,6 @@
             }
         }
     }
-    .article {
-
-        &__infor {
-            &-title {
-                .fonts-12();
-            }
-
-            &-content {
-                .fonts-1();
-            }
-        }
-    }
     
     .banner {
         &__desc {
@@ -71,10 +59,7 @@
             &-content {
                 .fonts-8();
             }
-
-  
         }
-
     }
 
     .container {
@@ -109,6 +94,16 @@
             
             &-btn {
                 width: 250px;                  
+            }
+        }
+    }
+
+    .footer {
+        &__contact {
+            &-help {
+                &:last-child {
+                    padding-bottom: 60px;
+                }
             }
         }
     }
@@ -258,6 +253,18 @@
         }
 
     }
+    .article {
+
+        &__infor {
+            &-title {
+                .fonts-7();
+            }
+
+            &-content {
+                .fonts-8();
+            }
+        }
+    }
 
     .container {
         &-nav {
@@ -363,8 +370,6 @@
         }
 
         &__best {
-            padding-top: 140px;
-            padding-bottom: 158px;
             position: relative;
             &-text {
                 & h2 {
@@ -457,14 +462,8 @@
     .rings {
 
         &__text {
-            display: grid;
-            grid-template-rows: auto auto;
             height: 100%;
             margin-top: 110px;
-
-            &-view {
-
-            }
 
         }
 
@@ -487,6 +486,17 @@
                 .fonts-14();
             }
 
+            &-text {
+                order: 1;
+                max-width: 500px;
+                margin-left: 100px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+
         }
 
         &__img {
@@ -502,11 +512,65 @@
             .fonts-14();
             padding-top: 60px;
         }
-        &-img {
+    }
 
+    .topic {
+        position: relative;
+
+        &__item {
+            padding-top: 40px;
         }
 
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            &-desc {
+                width: 418px;
+
+            }
+            order: 1;
+        }
+        &-rectangle {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            & svg {
+                &:last-child {
+                    position: absolute;
+                    top: -16px;
+                    right: -15px;
+
+                }
+            }
+        }
+
+        &__first {
+            order: 1;
+        }
+
+        &__second {
+            & div {
+                position: absolute;
+                float: left;
+                left: 32px;
+                top: calc(100% - 34px);
+            }
+            
+        }
     }
+
+    .paragraph {
+        &__content {
+            &-list {
+                padding-bottom: 0;
+            }
+        }
+    }
+
 
    
     .footer {
