@@ -1,14 +1,17 @@
-.grid {
-    width: 100%;
-    display: block;
-    padding: 0;
-}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -4px;
     margin-right: -4px;
 }
+
+.row-no-wrap {
+    display: flex;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
 .col {
     padding-left: 4px;
     padding-right: 4px;
@@ -43,6 +46,12 @@
         padding-left: 80px;
     }
 
+    .row-no-wrap {
+        display: flex;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
     .row {
         margin-left: -10px;
         margin-right: -10px;
@@ -54,6 +63,7 @@
        
     }
     .l-3,
+    .l-2-4,
     .l-2,
     .l-4,
     .l-5,
@@ -92,10 +102,17 @@
         max-width: 66.66667%;
     }
 
+    .l-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+
 }
 
 @media (min-width: 768px) and (max-width:1023px){
     .m-4,
+    .m-5
     .m-12 {
         display: block;
     }
@@ -103,6 +120,11 @@
     .m-4 {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+    }
+
+    .m-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
     }
 
     .m-12 {

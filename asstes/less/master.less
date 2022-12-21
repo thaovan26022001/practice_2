@@ -14,8 +14,7 @@
             padding-left: 10px;
             background-color: @noti-color;
             .fonts-2();
-            color: @white-color;
-            
+            color: @white-color;           
         }
         
         &-title {
@@ -25,8 +24,7 @@
         }
 
         &-list {
-            .display-flex();
-  
+            .display-flex();  
         }
 
         &-item {
@@ -41,6 +39,7 @@
             &:nth-child(3) {
                 padding-top: 3px;
             }
+
             &-link {
                 .fonts-1();
                 color: @text-color;
@@ -52,6 +51,7 @@
     &-icon {
         cursor: pointer;
     }
+
     &__content {
         position: fixed;
         background-color: @white-color;
@@ -61,16 +61,15 @@
         bottom: 0;
         left: 0;
         display: none;
+
         &&-open {
-            display: block;
-            
+            display: block;          
         }     
     }
 
     &__menu {
         background-color: @header-color;
-        padding: 0 16px;
-
+        padding: 0 16px 6px 16px;
     }
 
     &__logo-big {
@@ -84,8 +83,7 @@
         align-items: center;
 
         &-list {
-            display: flex;
-            
+            display: flex;          
         }
 
         &-item {
@@ -140,8 +138,7 @@
         
         &-item {
             list-style: none;
-            text-align: center;
-            
+            text-align: center;            
             position: relative;
         
             &:first-child{
@@ -150,8 +147,8 @@
                     border-bottom: 2px solid @black-color-text;
                     position: absolute;
                     top: 100%;
-                    right: -7px;
-                    left: -9px;
+                    right: 4px;
+                    left: 1px;
                 }
             }
             
@@ -219,8 +216,7 @@
         display: none;
 
         &&-open {
-            display: block;
-           
+            display: block;          
         }
     }
 
@@ -245,12 +241,10 @@
 
         &-service {
             display: block;
-            padding: 24px 22px 0 40px;
+            padding: 24px 32px 0 32px;
         }
 
         &-content {
-            color: @black-color-text;
-            .fonts-4();
             padding-bottom: 24px ;
 
             &:nth-of-type(2) {
@@ -289,18 +283,15 @@
                 text-decoration: none;
                 .fonts-1();
                 color: @black-color-text
-
-
             }
         }
-
     }
 
 }
 
 .article {
     &__container {
-        padding-top: 24px;     
+        padding-top: 50px;     
     }
 
     &__navigation {
@@ -332,10 +323,8 @@
             padding-bottom: 64px;
         }
     }
-    &__submenu {
-        &-list {
 
-        }
+    &__submenu {
         &-item {
             text-transform: uppercase;
             cursor: pointer;
@@ -348,9 +337,7 @@
 
             &:last-child {
             border-bottom: 1px solid @border-color;
-
             }
-
         }
     }
 
@@ -361,7 +348,11 @@
         background-repeat: no-repeat;
         background-size: contain;
         height: 100%;
+        position: relative;
 
+        & svg {
+            display: none;
+        }
     }
 
 }
@@ -375,11 +366,8 @@
         &-second {
             margin-bottom: 24px;
         }
-
     }
     &__title {
-        .fonts-4();
-        color: @black-color-text;
         padding-bottom: 20px;
     }
 
@@ -412,7 +400,7 @@
     }
 
     &__product {
-        display: flex;
+       
         &-link {
             display: flex;
             text-decoration: none;
@@ -461,8 +449,7 @@
         &-text {
             display: flex;
             justify-content: space-between;
-            & h2 {
-               
+            & h2 {             
                 padding-bottom: 40px;
             }
             &-view {
@@ -482,8 +469,7 @@
                     padding-top: 100%;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    background-position: top center;
-                    
+                    background-position: top center;                  
                 }
                 
             }
@@ -501,15 +487,13 @@
                 }
 
                 & p {
-                    padding-bottom: 4px;
-        
+                    padding-bottom: 4px;       
                 }
         }
 
         &-price {
             .fonts-3();
             color: @black-color-text;
-
         }
     }
 
@@ -524,6 +508,7 @@
         
         &-img {
             background-image: url(../svg/shop.png) ;
+            position: relative;
         }
         &-main {
             background-image: url(../svg/topic-12.png);
@@ -531,29 +516,23 @@
 
         &-card {
             
-            & h2 {
-                
-                padding-bottom: 16px;
-               
+            & h2 {               
+                padding-bottom: 16px;              
             }
-            & p {
-                
-                padding-bottom: 24px;
-                
+            & p {             
+                padding-bottom: 24px;            
             }
 
             &-btn {
                 background-color: @black-color-text;
                 color: @white-color;
                 width: 140px;
-
             }
             
             & svg {
                 display: none;
             }
         }
-
     }
 }
 
@@ -582,8 +561,7 @@
             padding-top: 4px;
         }
         
-        &-paragraph {
-            
+        &-paragraph {         
             .fonts-1();
             line-height: 140%;
             color: @white-color;
@@ -601,13 +579,11 @@
 .rings {
  
     &__text {     
-
         &-view {
             padding-top: 38px;
             display: flex;
             align-items: center;
         }
-
     }
 
     &__rectangle {
@@ -659,13 +635,29 @@
         }
 
         &-stop {
-            position: absolute;
-            z-index: 10;
-            top: 50%;
-            right: 50%;
-            transform: translate(50%, -50%);  
+            & .stop,
+            &-icon {
+              position: absolute;
+              z-index: 10;
+              right: 50%;
+              transform: translate(50%, -50%);  
+            }
+
+            & .stop {
+                top: 50%;
+            }
+
+            &-icon {
+                top: 43%;
+            }
+
         }
-            
+
+
+        &-bottom,
+        &-above {
+            display: none;
+        }            
     }
 }
 
@@ -691,11 +683,14 @@
             padding-bottom: 32px;
             padding-top: 16px;
         }
+
         &-list {
             display: flex;
         }
+
         &-item {
             list-style: none;
+
             &:nth-of-type(2n +1 ) {
                 padding-right: 16px;
             }
@@ -710,8 +705,6 @@
         }
     }
 
-    
-
     &-rectangle {
         display: none;
 
@@ -723,36 +716,22 @@
     &__title {
         padding-bottom: 32px;
         text-transform: capitalize;
-
     }
 
     &__content {
-        &-list {
-            padding-bottom: 32px;
-
-        }
-
         &-item {
             padding-bottom: 16px;
-            list-style: none;
-            // width: 75% pwr desktop
-
+            list-style: none;     
         }
     }
 }
 
 .title {
     &__img {
-        display: flex;
-       
+        display: flex;       
         position: relative;
-        &-picture {
-           
-            height: 100%;
-        }
 
-        & svg {
-            
+        & svg {        
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -782,7 +761,6 @@
 
             &-picture {
                 width: 100%;
-
             }
 
             &-first {
@@ -799,12 +777,10 @@
         }
         &-left {
             left: 0;
-
         }
 
         &-right {
             right: -31px;
-
         }
     }
 
@@ -812,26 +788,29 @@
         display: block;
     }
 }
+
 .benefits {
     & h2 {
         padding-bottom: 66px;
     }
+
     &__item {
         background-color: @background-color;
         position: relative;
         padding-bottom: 36px;
+
         & svg {
             &:last-child {
                 position:absolute;
                 right: 0;
             }
-
         }
+
         & h6 {
             padding: 26px 0 12px 0;
         }
-
     }
+
     &-col {      
         margin-bottom: 36px;
     }
@@ -840,6 +819,7 @@
 .main__subscribe {
     background-color: @black-color;
     position: relative;
+
     &-text {
         color: @white-color;
     }
@@ -850,8 +830,6 @@
         width: 40px;        
         cursor: pointer;
         border: none;
-        
-
     }
 }
 
@@ -863,15 +841,14 @@
     background: linear-gradient(0, #ffffff 0%, rgba(255, 255, 255, 0) 91.21%);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-end; 
 }
 
 .footer {
     padding-top: 64px;
     &__heading {
         background-color: @noti-color;
-        padding: 0 19px;
-       
+        padding: 0 19px;       
 
         &-close {
             display: none;
@@ -886,11 +863,9 @@
             padding-top: 26px;
             padding-bottom: 20px;
             column-gap: 14px;
-
         }
 
-        &-item {
-           
+        &-item {        
             list-style: none;
 
             &-link {
@@ -898,7 +873,6 @@
                 .fonts-3();
                 color: @white-color; 
             }
-            
         }
     }
 
@@ -926,7 +900,6 @@
         &-input-wrap {
             flex: 1;
             height: 100%;
-
         }
 
         &-input {
@@ -937,7 +910,6 @@
             padding: 0 16px;
             .fonts-1 ();
             color: @text-color;
-
         }
 
         &-btn {
@@ -946,7 +918,6 @@
             width: 40px;
             background-color: @black-color-text;
             cursor: pointer;
-
         }
     }
 
@@ -978,7 +949,6 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-
         }
     
     }
@@ -987,10 +957,6 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 40px;
-
-        &-logo {
-            padding-top: 66px;
-        }
 
         &-rating {
             display: flex;
@@ -1017,7 +983,6 @@
             list-style: none;
             padding-right: 4px;
             cursor: pointer;
-
         }
          
         &-item {
@@ -1043,7 +1008,6 @@
         }
 
         &-badges {
-
             &-img {
                 padding-right: 14px;
                 padding-bottom: 12px;
@@ -1053,23 +1017,23 @@
     
     &__social {
         padding-bottom: 48px;
+
         &-link {
             text-decoration: none;
             padding-left: 8px;
         }
     }
 
-    &__bottom {
-       
+    &__bottom {      
         padding-bottom: 20px;
         display: block;
+
         &-country {
             display: flex;
             .fonts-3();
 
             &-img {
                 padding-right: 12px;
-
             }
 
         }
@@ -1102,7 +1066,6 @@
             color: @text-color;
             .fonts-1();
             padding: 0 37px;
- 
          }
     }
 }

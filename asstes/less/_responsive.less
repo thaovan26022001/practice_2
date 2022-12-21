@@ -6,6 +6,7 @@
         &__menu {
             flex-direction: column;
             background-color: @header-color;
+            border-bottom: 1px solid @border-color;
         }
 
         
@@ -50,8 +51,7 @@
     }
 
     .article {
-
-        &__infor {
+        &__infor {            
             &-title {
                 .fonts-11();
             }
@@ -63,19 +63,15 @@
     }
 
     .container {
-        &__title {
-            .fonts-14();
-        }
 
         &__list {
             padding-top: 32px;
             padding-bottom: 16px;
-
         }
+
         &__cate {
             &-desc {
                 & h2 {
-                    .fonts-14;
                     text-align: center;
                 }
 
@@ -88,15 +84,13 @@
 
     .banner {  
         &__desc {
-            &-title {
-                .fonts-14();                 
-            }
             
             &-btn {
                 width: 250px;                  
             }
         }
     }
+ 
 
     .footer {
         &__contact {
@@ -170,21 +164,25 @@
                 height: 32px;
                 line-height: 32px;
             }
+
             &-title {
                 padding: 8px 32px;
                 flex-direction: row-reverse;
             }
+
             &-list {
                 &:nth-child(4) {
                     order: -1;
                 }
             }
         }
+
         &__category {
 
             &-list {
                 padding: 0;
             }
+
             &-item {
                 padding-right: 60px;
                 &:last-child {
@@ -198,8 +196,7 @@
                 }
 
                 &:first-child a {
-                    position: relative;
-
+                    position: relative;              
                     &:first-child{
                         &::after {
                             content: "";
@@ -220,7 +217,6 @@
                         display: none;
                     }  
                 }
-
             }
         }
 
@@ -230,9 +226,7 @@
 
         &__submenu {
             display: block;
-            &-item {
-                
-
+            &-item {                     
                 &:last-child {
                     padding-right: 0;
                 }
@@ -251,10 +245,6 @@
                 margin-top: 120px;
             }
         }
-
-    }
-    .article {
-
         &__infor {
             &-title {
                 .fonts-7();
@@ -264,14 +254,26 @@
                 .fonts-8();
             }
         }
+
+        &__img {
+            & svg {
+                display: block;
+                position: absolute;
+
+                &:first-child {                    
+                    top: 12px;
+                    right: 12px;                
+                }
+
+                &:last-child {                    
+                    top: 87%;
+                }
+            }
+            
+        }
     }
 
     .container {
-        &-nav {
-            padding-top: 130px;
-            padding-bottom: 120px;
-        }
-
         &__list {
             &-item {
                 flex: 0 0 125px;
@@ -280,22 +282,19 @@
 
         &__border {
             border: none;
+            margin-right: 0;
         }
 
         &__product {
             
             &-link {
                 position: relative;
-
                 &:hover {
-                    
                     border: 1px solid #DBDEE6;
                     border-radius: 2px;
-
                     & svg {
                         display: none
                     }
-
                 }
 
                 & h3 {
@@ -309,9 +308,9 @@
                     left: 0;
                     bottom: 0;
                 }
-
             }
         }
+
         &__cate {
             position: relative;
             &-extends {
@@ -319,11 +318,9 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-
             }
             &-desc {
-                max-width: 370px;
-                
+                max-width: 370px;               
                 & h2 {
                     text-align: left;
                 }
@@ -341,7 +338,6 @@
                     top: 20%;
                 }
                 
-
                 &-rectangle {
                     display: flex;
                     flex-direction: column;
@@ -364,22 +360,14 @@
 
             &-image {
                 padding-top: 0;
-                order: -1;
-                
+                order: -1;               
             }
         }
 
         &__best {
             position: relative;
-            &-text {
-                & h2 {
-                    .fonts-14();
-                }
-            }
-
             &-item {
                 &-img {
-
                     & div {
                         background-size: contain;
                     }
@@ -392,10 +380,8 @@
         }
 
         &__shop {
-
             &-Jewe {
                 position: relative;
-
             }
 
             &-title {
@@ -410,35 +396,26 @@
                 padding: 80px 0 80px 80px;
                 left: 50%;
                 transform: translateX(-50%);
-                top: calc(100% - 375px);
+                top: calc(100% - 340px);
                 inline-size: 66%;
-    
 
-                & h2 {
-                    .fonts-14();
-
-                }
                 & svg {
                     display: block;
-                }
-                
+                }                
             }
 
             &-corner-m {
                 position: absolute;
                 left: -10px;
                 top: calc(100% - 20px);
-
             }
 
             &-corner-l {
                 position: absolute;
                 right: 16px;
                 top: 5%;
-
             }
         }
-
     }
 
     .banner {
@@ -454,24 +431,26 @@
 
             &-content {
                 width: 404px;
-            }
-            
+            }          
         }
     }
 
     .rings {
+        position: relative;
 
         &__text {
             height: 100%;
-            margin-top: 110px;
-
+            display: flex;
+            flex-direction: column;
+            justify-content: center
         }
 
         &__rectangle{
             display: flex;
             flex-direction: column;
-            position: relative;
+            position: absolute;
             order: -1;
+            top: 20%;
             & svg {
                 &:last-child {
                     position: absolute;
@@ -481,22 +460,38 @@
             }           
         }
 
-        &__content {
-            & h2 {
-                .fonts-14();
-            }
-
-            &-text {
+        &__video {
+            position: relative;
+            &-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 order: 1;
-                max-width: 500px;
-                margin-left: 100px;
             }
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            
+            &-bottom,
+            &-above{
+                display: block;
+            }
 
+            &-bottom {
+                position: absolute;
+                top: 5%;
+                float: left;
+                left: 35%;
+            }   
+            
+            &-above {
+                position: absolute;
+                top: 25%;
+                right: 0;
+                float: right;
+            }
+        }
+
+        &__content {
+            max-width: 500px;               
         }
 
         &__img {
@@ -509,7 +504,6 @@
 
     .best__seller {
         & h2 {
-            .fonts-14();
             padding-top: 60px;
         }
     }
@@ -529,8 +523,8 @@
             
             &-desc {
                 width: 418px;
-
             }
+
             order: 1;
         }
         &-rectangle {
@@ -543,7 +537,6 @@
                     position: absolute;
                     top: -16px;
                     right: -15px;
-
                 }
             }
         }
@@ -558,8 +551,7 @@
                 float: left;
                 left: 32px;
                 top: calc(100% - 34px);
-            }
-            
+            }         
         }
     }
 
@@ -571,11 +563,47 @@
         }
     }
 
+    .benefits {
+        &-col {
+            margin-bottom: 0;
+        }
+    }
 
-   
+    .title {
+        &__bottom {
+            &-left {
+                left: 5px;
+            }
+
+            &-right {
+                right: -8px;
+            }
+        }
+
+        &__left {
+            left: 9px;
+        }      
+    }
+
+    .cover__white {
+        & span {
+            padding-top: 20px;
+        }
+    }
+
+    .main {
+        &-rectangle {
+            position: absolute;
+            float: left;
+            left: 10%;
+            top: 50%;          
+        }
+    }
+  
     .footer {
         &__heading {
             height: 48px;
+
             &-close {
                 display:block;
             }
@@ -590,14 +618,9 @@
         }
 
         &__subscribe  {
-            & h2 {
-                .fonts-4();
-            }
-
             & p {
                 .fonts-1();
             }
-
         }
 
         &__sponsor {
@@ -610,14 +633,13 @@
                     height: 16px;
                     border-right: 1px solid #DBDEE6;
                     top: 40%;
-                    transform: translateY(-50%);
-                                 
+                    transform: translateY(-50%);                             
                 }   
+
                 &:first-child{
                     &::before {
                         display: none ;
                     }
-
                 }
             }
         }
@@ -635,24 +657,24 @@
         &__bottom {
             .display-flex();
             align-items: center;
+
             &-country {
                 display: block;
             }
+
             &-list {
                 display: flex;
                 order: 1;
                 padding: 14px 0 0 0;
             }
+
             &-item {
                 padding-right: 40px;
                 &:last-child {
                     padding-right: 0;
                 }
-
             }
         }
-
-
     }
 }
 
