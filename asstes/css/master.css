@@ -1074,7 +1074,6 @@
     font-weight: 700;
     text-align: center;
     height: 32px;
-    line-height: 32px;
   }
   .header__mobile-title {
     padding: 8px 32px;
@@ -1131,10 +1130,6 @@
   .article__infor-title {
     font-size: 48px;
     font-weight: 600;
-  }
-  .article__infor-content {
-    font-size: 20px;
-    font-weight: 400;
   }
   .article__img svg {
     display: block;
