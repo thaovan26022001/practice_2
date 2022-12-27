@@ -112,34 +112,24 @@
 }
 .header__category-list {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   font-size: 12px;
   font-weight: 500;
-  height: 44px;
-  align-items: center;
-  padding: 0 4px 0 3px;
 }
 .header__category-item {
-  list-style: none;
   text-align: center;
   position: relative;
+  flex: 1;
+  padding: 0 14px;
 }
-.header__category-item:first-child::after {
-  content: "";
-  border-bottom: 2px solid #2D2D2D;
-  position: absolute;
-  top: 100%;
-  right: 4px;
-  left: 1px;
+.header__category-item:first-child {
+  border-bottom: 1px solid #2D2D2D;
 }
 .header__category-item-link {
   font-size: 12px;
   font-weight: 500;
   color: #637284;
   text-decoration: none;
-}
-.header__category-item:first-child a {
-  color: #2D2D2D;
 }
 .header-active-2 {
   color: #2D2D2D;
@@ -982,29 +972,11 @@
     background-color: #FAFAFA;
     border-bottom: 1px solid #DBDEE5;
   }
-  .header__category-list {
-    padding: 0 4px 0 3px;
-  }
-  .header__category-item {
-    padding: 8px 20px;
-    width: 118px;
-  }
   .banner__desc-content {
     padding-bottom: 60px;
   }
 }
 @media (min-width: 768px) {
-  .header__category-item:first-child {
-    position: relative;
-  }
-  .header__category-item:first-child::after {
-    top: calc(100% + 5px);
-    right: -4px;
-    left: -7px;
-    content: "";
-    border-bottom: 2px solid #2D2D2D;
-    position: absolute;
-  }
   .article__infor-title {
     font-size: 36px;
     font-weight: 600;
@@ -1082,28 +1054,20 @@
   .header__mobile-list:nth-child(4) {
     order: -1;
   }
-  .header__category-list {
-    padding: 0;
-  }
   .header__category-item {
-    padding-right: 60px;
+    flex: none;
+    padding: 0 60px 0 0;
   }
-  .header__category-item:last-child {
-    padding-right: 0;
+  .header__category-item:first-child {
+    border-bottom: none;
   }
-  .header__category-item:first-child::after {
-    display: none;
-  }
-  .header__category-item:first-child a {
-    position: relative;
-  }
-  .header__category-item:first-child a:first-child::after {
-    content: "";
-    position: absolute;
+  .header__category-item:first-child::before {
     border-bottom: 1px solid #2D2D2D;
-    top: calc(100% + 14px);
-    right: -2px;
-    left: 0;
+    position: absolute;
+    right: 54px;
+    left: -4px;
+    content: "";
+    top: 25px;
   }
   .header__category-item-link {
     font-size: 14px;
