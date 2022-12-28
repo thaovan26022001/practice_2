@@ -28,7 +28,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 18px;
             height: 24px;
             cursor: pointer;
@@ -43,7 +43,7 @@
             &-link {
                 .fonts-1();
                 color: @text-color;
-                text-decoration: none;
+                
             }
         }
     }
@@ -69,7 +69,7 @@
 
     &__menu {
         background-color: @header-color;
-        padding: 0 16px 6px 16px;
+        padding: 0 16px 0 16px;
     }
 
     &__logo-big {
@@ -87,7 +87,7 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 23px;
             position: relative;
 
@@ -98,7 +98,7 @@
             &-link {
                 .fonts-1();
                 color: @text-color;
-                text-decoration: none;
+                
             }
              
         }
@@ -148,7 +148,7 @@
             &-link {
                 .fonts-2();
                 color: @text-color;
-                text-decoration: none;
+                
             }  
         }
     }
@@ -173,13 +173,13 @@
             height: 44px;
             display: flex;
             justify-content: space-between;
-            list-style: none;
+            
             padding-right: 13px;
             position: relative;
         }
     
         &-logout-link {
-            text-decoration: none;
+            
             color: @black-color-text;
             align-items: center;
             padding-left: 20px;
@@ -243,7 +243,7 @@
         }
 
         &-link {
-            text-decoration: none;
+            
         }
 
          &-item {
@@ -266,11 +266,11 @@
         }
 
         &-item {
-            list-style: none;
+            
             padding-right: 40px;
             &-link {
                 text-transform: capitalize;
-                text-decoration: none;
+                
                 .fonts-1();
                 color: @black-color-text
             }
@@ -280,15 +280,16 @@
 }
 
 .article {
+    padding-top: 32px;
     &__container {
-        padding-top: 50px;     
+           
     }
 
     &__navigation {
         display: flex;
         align-items: center;
         &-link {
-            text-decoration: none;
+            
             .fonts-6();
             color: @black-color-text;
             text-transform: capitalize;
@@ -296,9 +297,6 @@
     }
 
     &__infor {
-        margin-top: 24px;
-        margin-bottom: 26px;
-  
         &-title {
             .fonts-12();
             line-height: 48px;
@@ -320,7 +318,7 @@
             cursor: pointer;
             .display-flex();
             align-items: center;
-            list-style: none;
+            
             height: 56px;
             .fonts-3();
             border-top: 1px solid @border-color;
@@ -339,10 +337,6 @@
         background-size: contain;
         height: 100%;
         position: relative;
-
-        & svg {
-            display: none;
-        }
     }
 
 }
@@ -365,7 +359,7 @@
         display: flex;
         padding: 16px 0;
         &-item {
-            list-style: none;
+            
             flex: 1;
             height: 44px;
             text-align: center;
@@ -378,7 +372,7 @@
         &-link {
             .fonts-1();
             color: @black-color-text;
-            text-decoration: none;
+            
             line-height: 44px;
         }
     }
@@ -393,7 +387,7 @@
        
         &-link {
             display: flex;
-            text-decoration: none;
+            
             align-items: center;
             min-width: 160px;
           
@@ -407,10 +401,6 @@
             & img {
                 width: 50%;
             }
-
-            & svg {
-                display: none;
-            }
         }
     }
 
@@ -423,10 +413,7 @@
             }
         }
 
-        &-img {
-            &-rectangle {
-                display: none;
-            }      
+        &-img {   
         }
 
         &-image {
@@ -519,9 +506,7 @@
                 width: 140px;
             }
             
-            & svg {
-                display: none;
-            }
+           
         }
     }
 }
@@ -576,9 +561,6 @@
         }
     }
 
-    &__rectangle {
-        display: none;
-    }
 
     &__img {
         position: relative;
@@ -628,7 +610,6 @@
             & .stop,
             &-icon {
               position: absolute;
-              z-index: 10;
               right: 50%;
               transform: translate(50%, -50%);  
             }
@@ -638,16 +619,10 @@
             }
 
             &-icon {
-                top: 43%;
+                top: 22%;
             }
 
-        }
-
-
-        &-bottom,
-        &-above {
-            display: none;
-        }            
+        }       
     }
 }
 
@@ -679,7 +654,7 @@
         }
 
         &-item {
-            list-style: none;
+            
 
             &:nth-of-type(2n +1 ) {
                 padding-right: 16px;
@@ -695,10 +670,7 @@
         }
     }
 
-    &-rectangle {
-        display: none;
-
-    }
+    
 }
 
 .paragraph {
@@ -711,7 +683,7 @@
     &__content {
         &-item {
             padding-bottom: 16px;
-            list-style: none;     
+                 
         }
     }
 }
@@ -793,6 +765,7 @@
             &:last-child {
                 position:absolute;
                 right: 0;
+                top: calc(100% - 16px);
             }
         }
 
@@ -856,7 +829,7 @@
         }
 
         &-item {        
-            list-style: none;
+            
 
             &-link {
                 text-decoration: none;
@@ -925,7 +898,7 @@
 
         &-item {
             flex: 1;
-            list-style: none;     
+                 
             
             &:first-child {
                 & img {
@@ -970,18 +943,18 @@
         }
 
         &-star-item {
-            list-style: none;
+            
             padding-right: 4px;
             cursor: pointer;
         }
          
         &-item {
-            list-style: none;
+            
             padding-bottom: 20px;
         }
 
         &-link {
-            text-decoration: none;
+            
             .fonts-10();
             color: @black-color-text;
             line-height: 1.8;
@@ -993,7 +966,7 @@
             &-link {
                 .fonts-10();
                 color: @black-color-text;
-                text-decoration: none;
+                
             }
         }
 
@@ -1009,7 +982,7 @@
         padding-bottom: 48px;
 
         &-link {
-            text-decoration: none;
+            
             padding-left: 8px;
         }
     }
@@ -1033,7 +1006,7 @@
         }
 
         &-item {
-            list-style: none;
+        
             padding-right: 20px;
             padding-bottom: 16px;
 
@@ -1043,7 +1016,7 @@
 
             &-link {
                 .fonts-1();
-                text-decoration: none;
+                
                 color: @text-color;
             }
 
