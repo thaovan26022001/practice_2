@@ -78,14 +78,6 @@
 @media (min-width: 1024px) {
 
     .header {
-        &__hide-on-pc {
-            display: none;
-        }
-
-        &__hide {
-            display: flex;
-        }
-
         &__content {
             display: block;
             position: static;
@@ -107,21 +99,12 @@
                     .fonts-1();
                 }
             }
-
         }
         
         &__menu {
             background-color: @white-color;
             display: flex;
             padding: 0;
-        }
-        
-        &__logo-small {
-            display: none;
-        }
-
-        &__logo-big {
-            display: block;
         }
 
         &__mobile {
@@ -210,9 +193,7 @@
         &__infor {
             &-title {
                 .fonts-7();
-            }
-
-           
+            }         
         }
 
         &__img {
@@ -271,6 +252,13 @@
 
         &__cate {
             position: relative;
+
+            &-img {
+                & img {
+                    width: 55%;
+                }
+            }
+
             &-extends {
                 display: flex;
                 flex-direction: column;
@@ -281,38 +269,6 @@
                 max-width: 370px;               
                 & h2 {
                     text-align: left;
-                }
-            }
-
-            &-img {
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                align-self: flex-end;
-                & div {
-                    position: absolute;
-                    float: right;
-                    right: 5%;
-                    top: 20%;
-                }
-                
-                &-rectangle {
-                    display: flex;
-                    flex-direction: column;
-                    position: relative;
-                    order: -1;
-                    & svg {
-                        &:last-child {
-                            position: absolute;
-                            left: -15px;
-                            top: 100%;
-                        }
-                    }
-                }
-
-                & img {
-                    width: 55%;
-                    height: auto;
                 }
             }
 
@@ -355,22 +311,10 @@
                 left: 50%;
                 transform: translateX(-50%);
                 top: calc(100% - 340px);
-                inline-size: 66%;
-
-                              
+                inline-size: 66%;                            
             }
 
-            &-corner-m {
-                position: absolute;
-                left: -10px;
-                top: calc(100% - 20px);
-            }
-
-            &-corner-l {
-                position: absolute;
-                right: 16px;
-                top: 5%;
-            }
+            
         }
     }
 
@@ -401,44 +345,15 @@
             justify-content: center
         }
 
-        &__rectangle{
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            order: -1;
-            top: 20%;
-            & svg {
-                &:last-child {
-                    position: absolute;
-                    left: 32px;
-                    top: 32px;
-                }
-            }           
-        }
-
         &__video {
             position: relative;
+
             &-left {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 order: 1;
-            }
-
-
-            &-bottom {
-                position: absolute;
-                top: 5%;
-                float: left;
-                left: 35%;
-            }   
-            
-            &-above {
-                position: absolute;
-                top: 25%;
-                right: 0;
-                float: right;
             }
         }
 
@@ -479,32 +394,10 @@
 
             order: 1;
         }
-        &-rectangle {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-
-            & svg {
-                &:last-child {
-                    position: absolute;
-                    top: -16px;
-                    right: -15px;
-                }
-            }
-        }
 
         &__first {
             order: 1;
-        }
-
-        &__second {
-            & div {
-                position: absolute;
-                float: left;
-                left: 32px;
-                top: calc(100% - 34px);
-            }         
-        }
+        }    
     }
 
     .paragraph {
@@ -540,15 +433,6 @@
     .cover__white {
         & span {
             padding-top: 20px;
-        }
-    }
-
-    .main {
-        &-rectangle {
-            position: absolute;
-            float: left;
-            left: 10%;
-            top: 50%;          
         }
     }
   
