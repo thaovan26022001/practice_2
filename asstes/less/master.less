@@ -362,8 +362,7 @@
 
         &-link {
             .fonts-1();
-            color: @black-color-text;
-            
+            color: @black-color-text;           
             line-height: 44px;
         }
     }
@@ -449,6 +448,7 @@
             }
             &-view {
                 .fonts-3();
+                padding-right: 12px;
             }
         }
 
@@ -787,7 +787,7 @@
             transform: translateY(-50%);
 
             &-left {
-                left: 4px;
+                left: 6px;
             }
 
             &-right {
@@ -817,19 +817,10 @@
                 display: block;
             }
 
-            & svg {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-        }
-        &-left {
-            left: 0;
         }
 
         &-right {
-            right: -31px;
+            right: 0;
         }
     }
 
@@ -848,8 +839,10 @@
         position: relative;
         padding: 24px 0 36px 24px;
 
-        &-img {
-            
+        & svg{
+            position: absolute;
+            top: calc(100% - 17px);
+            right: 0;
         }
 
         & h3 {
@@ -904,7 +897,6 @@
         padding: 0 19px;       
 
         &-close {
-            display: none;
             float: right;
             padding-top: 14px;
         }
@@ -919,12 +911,15 @@
         }
 
         &-item {        
-            
-
+        
             &-link {
-                text-decoration: none;
+                display: flex;
+                align-items: center;
                 .fonts-3();
                 color: @white-color; 
+                & img {
+                    padding-right: 8px;
+                }
             }
         }
     }
@@ -982,26 +977,17 @@
             padding: 24px 0;
             border-bottom: 1px solid @gray-line-color;
             border-top: 1px solid @gray-line-color;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 16px;
         }
 
         &-item {
-            flex: 1;
-                 
-            
-            &:first-child {
-                & img {
-                    margin: 0;
-                }
-            }
         }
 
         &-img {
             height: 100%;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
         }
     
     }

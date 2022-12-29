@@ -64,6 +64,14 @@
  
 
     .footer {
+        &__sponsor {
+    
+            &-list {    
+    
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                row-gap: 16px;
+            }
+        }
         &__contact {
             &-help {
                 &:last-child {
@@ -387,12 +395,21 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            order: 1;
             
             &-desc {
                 width: 418px;
             }
+           
+            &-item {
+                & h5 {
+                    .fonts-3();
+                }
 
-            order: 1;
+                & p {
+                    .fonts-1();
+                }
+            }
         }
 
         &__first {
@@ -440,16 +457,11 @@
         &__heading {
             height: 48px;
 
-            &-close {
-                display:block;
-            }
-
             &-list {
                 display: flex;
                 justify-content: space-evenly; 
                 align-items: center;
-                line-height: 48px;
-                padding: 0;
+                padding: 12px 0;
             }
         }
 
@@ -460,24 +472,37 @@
         }
 
         &__sponsor {
-            &-item {
-                position: relative;
-                &::before {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    height: 16px;
-                    border-right: 1px solid #DBDEE6;
-                    top: 40%;
-                    transform: translateY(-50%);                             
-                }   
-
-                &:first-child{
-                    &::before {
-                        display: none ;
-                    }
-                }
+            &-list {
+                display: flex;
             }
+            &-item {
+                flex: 1;   
+                &-link {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        height: 60%;
+                        border-left: 1px solid #e5e5e5;
+                        transform: translateY(-50%);
+                        display: block;
+                    }
+                }  
+                &:last-child a{
+                    &::before {
+                        display: none;
+                    }
+                    
+                }     
+            }
+
+            &-img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
         }
 
         &__contact {
