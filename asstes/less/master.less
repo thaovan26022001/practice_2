@@ -21,6 +21,7 @@
             .display-flex();
             align-items: center;
             padding: 4px 12px 7px 12px;
+            height: 58px
         }
 
         &-list {
@@ -30,14 +31,10 @@
         &-item {
             
             padding-right: 18px;
-            height: 24px;
+            height: 30px;
             cursor: pointer;
             &:last-child {
                 padding-right: 0;
-            }
-
-            &:nth-child(3) {
-                padding-top: 3px;
             }
 
             &-link {
@@ -71,7 +68,6 @@
         background-color: @header-color;
         padding: 0 16px 0 16px;
     }
-
     
     &__navbar {
         padding: 16px 16px 0 16px;
@@ -81,6 +77,7 @@
 
         &-list {
             display: flex;          
+            align-items: center;
         }
 
         &-item {
@@ -563,15 +560,11 @@
             padding-bottom: 60px
         }
         &-title {
-            .fonts-4();
-            line-height: 120%;
             color: @white-color;
-            padding-top: 4px;
+            padding-top: 24px;
         }
         
         &-paragraph {         
-            .fonts-1();
-            line-height: 140%;
             color: @white-color;
             padding: 24px 0;
         }
@@ -629,7 +622,7 @@
         &-block {
             display: block;
             position: absolute;
-            bottom: 33px;
+            bottom: 20px;
             left: 10%;
 
             & button {
@@ -709,25 +702,29 @@
 
 .topic{
     background-color: @background-color;
+    padding: 32px;
     &__content {
-        & p {
-            padding-bottom: 32px;
-            padding-top: 16px;
-        }
 
         &-list {
             display: flex;
+            margin: 32px 0;
+
         }
 
         &-item {
-            
+            & img {
+                padding: 14px;
+                background-color: @point-color;
+                border: none;
+            }
 
             &:nth-of-type(2n +1 ) {
                 padding-right: 16px;
             }
 
             & p{
-                padding-top: 8px;
+                padding-top: 4px;
+                .fonts-2();
             }
         }
 
@@ -782,21 +779,21 @@
     &__img {
         display: flex;       
         position: relative;
+    }
 
-        & svg {        
+    &-move {        
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+
+            &-left {
+                left: 4px;
+            }
+
+            &-right {
+                right: -30px;
+            }
         }
-    }
-
-    &__left {
-        left: 4px;
-    }
-
-    &__right {
-        right: -30px;
-    }
 
     &__pagi {
         display: flex;
@@ -849,17 +846,13 @@
     &__item {
         background-color: @background-color;
         position: relative;
-        padding-bottom: 36px;
+        padding: 24px 0 36px 24px;
 
-        & svg {
-            &:last-child {
-                position:absolute;
-                right: 0;
-                top: calc(100% - 16px);
-            }
+        &-img {
+            
         }
 
-        & h6 {
+        & h3 {
             padding: 26px 0 12px 0;
         }
     }
