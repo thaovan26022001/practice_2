@@ -986,6 +986,9 @@
   }
 }
 @media (min-width: 768px) {
+  .header__mobile-notifi {
+    text-align: center;
+  }
   .article__infor-title {
     font-size: 36px;
     font-weight: 600;
@@ -997,9 +1000,6 @@
   .container__list {
     padding-top: 32px;
     padding-bottom: 16px;
-  }
-  .container__cate-desc h2 {
-    text-align: center;
   }
   .container__cate-desc p {
     font-size: 20px;
@@ -1104,7 +1104,7 @@
     right: 12px;
   }
   .article__img svg:last-child {
-    top: 87%;
+    top: 85%;
   }
   .container__list-item {
     flex: 0 0 125px;
@@ -1115,10 +1115,6 @@
   }
   .container__product-link {
     position: relative;
-  }
-  .container__product-link:hover {
-    border: 1px solid #DBDEE6;
-    border-radius: 2px;
   }
   .container__product-link h3 {
     font-size: 28px;

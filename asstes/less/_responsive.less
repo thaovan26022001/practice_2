@@ -20,6 +20,14 @@
 }   
     
 @media (min-width: 768px) {
+    .header {
+        &__mobile {
+
+            &-notifi {
+                text-align: center;   
+            }
+        }
+    }
 
     .article {
         &__infor {            
@@ -42,10 +50,6 @@
 
         &__cate {
             &-desc {
-                & h2 {
-                    text-align: center;
-                }
-
                 & p {
                     .fonts-8();
                 }
@@ -215,7 +219,7 @@
                 }
 
                 &:last-child {                    
-                    top: 87%;
+                    top: 85%;
                 }
             }
             
@@ -238,12 +242,6 @@
             
             &-link {
                 position: relative;
-                &:hover {
-                    border: 1px solid #DBDEE6;
-                    border-radius: 2px;
-                    
-                }
-
                 & h3 {
                     .fonts-15();
                     color: @text-color;
