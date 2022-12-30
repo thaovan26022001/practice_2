@@ -161,12 +161,10 @@
             cursor: pointer;
             align-items: center;
             border-bottom: 1px solid @border-color;
-            height: 44px;
-            display: flex;
-            justify-content: space-between;
-            
+            height: 44px;      
             padding-right: 13px;
             position: relative;
+            .display-flex(); 
         }
     
         &-logout-link {
@@ -331,9 +329,7 @@
     }
 
 }
-.hidden {
-    display: none;
-}
+
 
 .container {
     &-nav {
@@ -377,7 +373,7 @@
        
         &-link {
             display: flex;
-            
+            height: 100%;
             align-items: center;
             min-width: 160px;
           
@@ -408,29 +404,7 @@
             &-position {
                 display: flex;
                 flex-direction: row-reverse;
-            }
-
-           
-            
-            &-rectangle {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                float: right;
-                right: 5%;
-                top: 20%;
-               
-                order: -1;
-                & svg {
-                    &:last-child {
-                        position: absolute;
-                        left: -15px;
-                        top: 100%;
-                    }
-                }
-            }
-
-            
+            }           
         }
 
         &-image {
@@ -439,23 +413,34 @@
         }
     }
 
+    &__rectangle {
+        float: right;
+        right: 5%;
+        top: 20%;          
+        order: -1;
+        & svg {
+            &:last-child {
+                position: absolute;
+                left: -15px;
+                top: calc(100% - 5px);
+            }
+        }
+    }
+
     &__best {
         &-text {
-            display: flex;
-            justify-content: space-between;
-            & h2 {             
-                padding-bottom: 40px;
-            }
+            margin-bottom: 10px;
+            .display-flex();
+
             &-view {
-                .fonts-3();
-                padding-right: 12px;
+                .fonts-3();              
             }
         }
 
         &-item {
             display: block;
             text-decoration: none;
-            padding-bottom: 20px;
+            margin-top: 20px;
             
             &-img {
                 position: relative;
@@ -465,8 +450,7 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: top center;                  
-                }
-                
+                }               
             }
 
             &-heart {
@@ -581,9 +565,6 @@
     position: relative;
 
     &__rectangle{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
         order: -1;
         top: 20%;
         & svg {
@@ -734,11 +715,6 @@
     }
 
     &-rectangle {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        
-
         & svg {
             &:last-child {
                 position: absolute;
@@ -750,7 +726,7 @@
 
     &__second {
         & div {
-            position: absolute;
+            
             float: left;
             left: 32px;
             top: calc(100% - 34px);
@@ -884,7 +860,6 @@
 }
 
 .main-rectangle {
-    position: absolute;
     float: left;
     left: 10%;
     top: 50%;
@@ -903,7 +878,7 @@
 
         &-list {
             display: grid;
-            grid-template-columns: auto auto; 
+            grid-template-columns: 1fr 1fr; 
             row-gap: 12px;  
             padding-top: 26px;
             padding-bottom: 20px;
@@ -982,14 +957,10 @@
             row-gap: 16px;
         }
 
-        &-item {
-        }
-
         &-img {
             height: 100%;
             display: block;
-        }
-    
+        }   
     }
 
     &__contact {
@@ -1064,21 +1035,17 @@
     }
 
     &__bottom {      
-        padding-bottom: 20px;
+        margin-bottom: 20px;
         display: block;
 
         &-country {
             display: flex;
-            .fonts-3();
-
             &-img {
                 padding-right: 12px;
             }
-
         }
-
         &-list {
-           padding: 16px 37px 48px 37px;
+           padding-top: 24px;
         }
 
         &-item {
@@ -1104,7 +1071,7 @@
         &-year {
             color: @text-color;
             .fonts-1();
-            padding: 0 37px;
+            
          }
     }
 

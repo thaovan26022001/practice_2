@@ -14,6 +14,7 @@
         &__desc {
             &-content {
                 padding-bottom: 60px;
+                
             }
         }
     }
@@ -59,14 +60,15 @@
 
     .banner {  
         &__desc {
-            
+            &-content {
+                justify-content: center;
+            }
             &-btn {
                 width: 250px;                  
             }
         }
     }
  
-
     .footer {
         &__sponsor {
     
@@ -80,6 +82,12 @@
             &-help {
                 &:last-child {
                     padding-bottom: 60px;
+                }
+            }
+
+            &-rating {
+                & h2 {
+                    .fonts-10();
                 }
             }
         }
@@ -189,18 +197,14 @@
 
     .article{
         &__present {
-            
+            justify-content: center;
             height: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            
         }
 
         &__infor {
-            max-width: 466px;
-            &-title {
-               
-            }
+            max-width: 466px;           
         }
         &__infor {
             &-title {
@@ -219,7 +223,7 @@
                 }
 
                 &:last-child {                    
-                    top: 85%;
+                    top: 87%;
                 }
             }
             
@@ -236,6 +240,13 @@
         &__border {
             border: none;
             margin-right: 0;
+            border: 1px solid @white-color;
+            &:hover {
+                border: 1px solid @gray-line-color;
+                & svg {
+                    display: none;
+                }
+            }
         }
 
         &__product {
@@ -266,8 +277,6 @@
             }
 
             &-extends {
-                display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
             }
@@ -331,8 +340,6 @@
 
         &__desc {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             padding-left: 68px;
 
             &-content {
@@ -346,8 +353,6 @@
 
         &__text {
             height: 100%;
-            display: flex;
-            flex-direction: column;
             justify-content: center
         }
 
@@ -355,8 +360,6 @@
             position: relative;
 
             &-left {
-                display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 order: 1;
@@ -389,8 +392,7 @@
         }
 
         &__content {
-            display: flex;
-            flex-direction: column;
+            
             align-items: center;
             justify-content: center;
             order: 1;

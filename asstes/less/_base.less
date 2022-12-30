@@ -118,7 +118,12 @@ html {
     justify-content: space-between;
 }
 
-.p-80 {
+.display-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.pt-80 {
     padding-top: 80px;
 }
 
@@ -170,6 +175,12 @@ a {
     text-decoration: none;
 }
 
+.rectangle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
 .hide-on-mobi {
     display: none;
 }
@@ -177,9 +188,11 @@ a {
 .show-on-mobi {
     display: block;
 }
+
 .filter {
     filter: brightness(80%);
 }
+
 @media (max-width: 420px) {
 
 }
@@ -188,6 +201,10 @@ a {
     h2 {
         .fonts-14();
         line-height: 120%;
+    }
+
+    .show-on-tablet {
+        display: block;
     }
 
 }
